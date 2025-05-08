@@ -19,24 +19,16 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                {/* Bug in compass logo */}
+                {/* Simple compass logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" className="mr-3" aria-hidden="true">
                   {/* Compass circle */}
-                  <circle cx="50" cy="50" r="40" stroke="#F5F7F4" strokeWidth="4" fill="transparent"/>
+                  <circle cx="50" cy="50" r="45" stroke="#FFFFFF" strokeWidth="2" fill="transparent"/>
                   
-                  {/* North-South pointer */}
-                  <path d="M50 10 L50 30 M50 70 L50 90" stroke="#F5F7F4" strokeWidth="4" fill="none"/>
+                  {/* Center bug */}
+                  <circle cx="50" cy="50" r="6" fill="#F6B04D"/>
                   
-                  {/* East-West pointer */}
-                  <path d="M10 50 L30 50 M70 50 L90 50" stroke="#F5F7F4" strokeWidth="4" fill="none"/>
-                  
-                  {/* Bug silhouette */}
-                  <path d="M50 30 L40 40 L60 40 Z" fill="#F5F7F4" /> {/* Head */}
-                  <ellipse cx="50" cy="50" rx="10" ry="15" fill="#F5F7F4" /> {/* Body */}
-                  <ellipse cx="50" cy="50" rx="3" ry="8" fill="#F6B04D" /> {/* Orange center */}
-                  
-                  {/* Legs */}
-                  <path d="M42 45 L32 40 M42 55 L32 60 M58 45 L68 40 M58 55 L68 60" stroke="#F5F7F4" strokeWidth="3" fill="none"/>
+                  {/* Bug body silhouette (small) */}
+                  <ellipse cx="50" cy="50" rx="3" ry="10" fill="#FFFFFF"/>
                 </svg>
                 <span className="text-nps-ivory text-lg font-medium">Northern Pest Solutions</span>
               </div>
