@@ -13,13 +13,13 @@ export default function Header() {
 
   return (
     <header className="bg-[#295231] text-white sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                <img src="/assets/logo-horizontal.svg" alt="Northern Pest Solutions logo" className="h-10 w-auto" />
+                <img src="/assets/northern-logo-horizontal.svg" alt="Northern Pest Solutions logo" className="h-12 w-auto" />
               </div>
             </Link>
           </div>
