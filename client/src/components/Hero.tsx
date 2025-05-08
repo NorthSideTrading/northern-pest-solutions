@@ -9,9 +9,8 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, showButtons = true }: HeroProps) {
   return (
-    <section className="relative bg-nps-forest text-nps-ivory hero-section overflow-hidden min-h-[70vh] md:min-h-[65vh]">
-      <div className="absolute inset-0 bg-[var(--nps-forest)]/70"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,.4)_100%)]"></div>
+    <section className="relative text-nps-ivory hero-section overflow-hidden min-h-[70vh] md:min-h-[65vh]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,.25)_100%)]"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <img 
@@ -27,14 +26,14 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
           <p className="mt-6 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl">{subtitle}</p>
           
           {showButtons && (
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
               <Link href="#services">
                 <Button className="btn-primary text-lg">
                   Our Services
                 </Button>
               </Link>
               <Link href="#contact-form">
-                <Button className="btn-outline text-lg">
+                <Button className="rounded-full px-5 py-2 border border-[var(--nps-amber)] text-[var(--nps-amber)] font-semibold hover:bg-[var(--nps-amber)]/10 transition text-lg">
                   Contact Us
                 </Button>
               </Link>
