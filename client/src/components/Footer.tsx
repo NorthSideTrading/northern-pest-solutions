@@ -33,12 +33,12 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-4 text-[var(--nps-amber)]">Quick Links</h4>
             <ul className="space-y-2">
               {NAVIGATION.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href}>
-                    <span className="text-sm hover:text-amber-300 transition-colors cursor-pointer">
+                    <span className="text-sm hover:text-[var(--nps-amber)] transition-colors cursor-pointer">
                       {item.name}
                     </span>
                   </Link>
@@ -49,12 +49,12 @@ export default function Footer() {
           
           {/* Services */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Our Services</h4>
+            <h4 className="text-lg font-bold mb-4 text-[var(--nps-amber)]">Our Services</h4>
             <ul className="space-y-2">
               {featuredServices.map((service) => (
                 <li key={service.id}>
                   <Link href={`/services/${service.id}`}>
-                    <span className="text-sm hover:text-amber-300 transition-colors cursor-pointer">
+                    <span className="text-sm hover:text-[var(--nps-amber)] transition-colors cursor-pointer">
                       {service.name} Control
                     </span>
                   </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link href="/#services">
-                  <span className="text-sm hover:text-amber-300 transition-colors cursor-pointer">
+                  <span className="text-sm hover:text-[var(--nps-amber)] transition-colors cursor-pointer">
                     View All Services
                   </span>
                 </Link>
@@ -75,19 +75,19 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4">Contact Info</h4>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-2 text-amber-300" />
-                <a href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`} className="text-sm hover:text-amber-300 transition-colors">
+                <Phone className="w-4 h-4 mr-2 text-[var(--nps-amber)]" />
+                <a href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`} className="text-sm hover:text-[var(--nps-amber)] transition-colors">
                   {COMPANY_INFO.phone}
                 </a>
               </li>
               <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-2 text-amber-300" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="text-sm hover:text-amber-300 transition-colors">
+                <Mail className="w-4 h-4 mr-2 text-[var(--nps-amber)]" />
+                <a href={`mailto:${COMPANY_INFO.email}`} className="text-sm hover:text-[var(--nps-amber)] transition-colors">
                   {COMPANY_INFO.email}
                 </a>
               </li>
               <li className="flex items-center">
-                <Clock className="w-4 h-4 mr-2 text-amber-300" />
+                <Clock className="w-4 h-4 mr-2 text-[var(--nps-amber)]" />
                 <span className="text-sm">{COMPANY_INFO.hours}</span>
               </li>
             </ul>
