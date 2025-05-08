@@ -60,13 +60,13 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-6">
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
-                <span className="font-medium hover:text-amber-300 transition-colors cursor-pointer">{item.name}</span>
+                <span className="font-medium hover:text-nps-amber transition-colors cursor-pointer">{item.name}</span>
               </Link>
             ))}
             
             {/* CTA Button */}
             <Button 
-              className="bg-[#F29D38] hover:bg-amber-500 text-white font-medium rounded-lg transition-colors"
+              className="bg-nps-amber hover:bg-nps-amber/90 text-nps-forest font-medium rounded-lg transition-colors"
             >
               Get a Quote
             </Button>
@@ -81,7 +81,7 @@ export default function Header() {
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
                 <span 
-                  className="font-medium hover:text-amber-300 transition-colors cursor-pointer block"
+                  className="font-medium hover:text-nps-amber transition-colors cursor-pointer block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -89,7 +89,7 @@ export default function Header() {
               </Link>
             ))}
             <Button 
-              className="bg-[#F29D38] hover:bg-amber-500 text-white font-medium rounded-lg transition-colors mt-2 w-full"
+              className="bg-nps-amber hover:bg-nps-amber/90 text-nps-forest font-medium rounded-lg transition-colors mt-2 w-full"
             >
               Get a Quote
             </Button>
