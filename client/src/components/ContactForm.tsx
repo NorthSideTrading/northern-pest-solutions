@@ -49,12 +49,12 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-neutral-light p-8 rounded-lg shadow-md">
-      <h3 className="text-2xl font-bold font-heading text-primary mb-6">Send Us a Message</h3>
+    <form onSubmit={handleSubmit} className="bg-[var(--nps-ivory)] p-8 rounded-lg shadow-md">
+      <h3 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Send Us a Message</h3>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
         <div>
-          <Label htmlFor="name" className="block text-neutral-dark mb-2">Name</Label>
+          <Label htmlFor="name" className="block text-gray-700 mb-2 font-medium">Name</Label>
           <Input 
             type="text" 
             id="name" 
@@ -67,7 +67,7 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <Label htmlFor="phone" className="block text-neutral-dark mb-2">Phone</Label>
+          <Label htmlFor="phone" className="block text-gray-700 mb-2 font-medium">Phone</Label>
           <Input 
             type="tel" 
             id="phone" 
@@ -81,7 +81,7 @@ export default function ContactForm() {
       </div>
       
       <div className="mb-6">
-        <Label htmlFor="email" className="block text-neutral-dark mb-2">Email</Label>
+        <Label htmlFor="email" className="block text-gray-700 mb-2 font-medium">Email</Label>
         <Input 
           type="email" 
           id="email" 
@@ -94,7 +94,7 @@ export default function ContactForm() {
       </div>
       
       <div className="mb-6">
-        <Label htmlFor="service" className="block text-neutral-dark mb-2">Service Needed</Label>
+        <Label htmlFor="service" className="block text-gray-700 mb-2 font-medium">Service Needed</Label>
         <Select value={formData.service} onValueChange={handleSelectChange}>
           <SelectTrigger id="service" className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary">
             <SelectValue placeholder="Select a Service" />
@@ -110,7 +110,7 @@ export default function ContactForm() {
       </div>
       
       <div className="mb-6">
-        <Label htmlFor="message" className="block text-neutral-dark mb-2">Message</Label>
+        <Label htmlFor="message" className="block text-gray-700 mb-2 font-medium">Message</Label>
         <Textarea 
           id="message" 
           rows={4} 
