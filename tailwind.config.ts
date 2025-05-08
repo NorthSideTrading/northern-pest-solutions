@@ -11,6 +11,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // Northern Pest Solutions color palette
+        'nps-forest': '#1B3C2F', // primary (nav, headings)
+        'nps-sage': '#8BAE89',   // secondary (background-tint)
+        'nps-ivory': '#F5F7F4',  // light background / text
+        'nps-amber': '#F6B04D',  // CTA buttons & highlights
+        
+        // Default shadcn colors
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -22,20 +29,20 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "var(--nps-forest, #1B3C2F)",
+          foreground: "var(--nps-ivory, #F5F7F4)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "var(--nps-sage, #8BAE89)",
+          foreground: "var(--nps-forest, #1B3C2F)",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "var(--nps-amber, #F6B04D)",
+          foreground: "var(--nps-forest, #1B3C2F)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#295231] text-white sticky top-0 z-50 shadow-md">
+    <header className="bg-nps-forest text-nps-ivory sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between">
           {/* Logo - Simple Orange Line */}
@@ -22,30 +22,30 @@ export default function Header() {
                 {/* Bug in compass logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" className="mr-3" aria-hidden="true">
                   {/* Compass circle */}
-                  <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="4" fill="transparent"/>
+                  <circle cx="50" cy="50" r="40" stroke="#F5F7F4" strokeWidth="4" fill="transparent"/>
                   
                   {/* North-South pointer */}
-                  <path d="M50 10 L50 30 M50 70 L50 90" stroke="white" strokeWidth="4" fill="none"/>
+                  <path d="M50 10 L50 30 M50 70 L50 90" stroke="#F5F7F4" strokeWidth="4" fill="none"/>
                   
                   {/* East-West pointer */}
-                  <path d="M10 50 L30 50 M70 50 L90 50" stroke="white" strokeWidth="4" fill="none"/>
+                  <path d="M10 50 L30 50 M70 50 L90 50" stroke="#F5F7F4" strokeWidth="4" fill="none"/>
                   
                   {/* Bug silhouette */}
-                  <path d="M50 30 L40 40 L60 40 Z" fill="white" /> {/* Head */}
-                  <ellipse cx="50" cy="50" rx="10" ry="15" fill="white" /> {/* Body */}
-                  <ellipse cx="50" cy="50" rx="3" ry="8" fill="#F29D38" /> {/* Orange center */}
+                  <path d="M50 30 L40 40 L60 40 Z" fill="#F5F7F4" /> {/* Head */}
+                  <ellipse cx="50" cy="50" rx="10" ry="15" fill="#F5F7F4" /> {/* Body */}
+                  <ellipse cx="50" cy="50" rx="3" ry="8" fill="#F6B04D" /> {/* Orange center */}
                   
                   {/* Legs */}
-                  <path d="M42 45 L32 40 M42 55 L32 60 M58 45 L68 40 M58 55 L68 60" stroke="white" strokeWidth="3" fill="none"/>
+                  <path d="M42 45 L32 40 M42 55 L32 60 M58 45 L68 40 M58 55 L68 60" stroke="#F5F7F4" strokeWidth="3" fill="none"/>
                 </svg>
-                <span className="text-white text-lg font-medium">Northern Pest Solutions</span>
+                <span className="text-nps-ivory text-lg font-medium">Northern Pest Solutions</span>
               </div>
             </Link>
           </div>
           
           {/* Mobile menu button */}
           <button 
-            className="block md:hidden text-white hover:text-amber-300 focus:outline-none" 
+            className="block md:hidden text-nps-ivory hover:text-nps-amber focus:outline-none" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 :root {
+  /* Northern Pest Solutions color palette */
+  --nps-forest: #1B3C2F;   /* primary (nav, headings) */
+  --nps-sage: #8BAE89;     /* secondary (background-tint) */
+  --nps-ivory: #F5F7F4;    /* light background / text */
+  --nps-amber: #F6B04D;    /* CTA buttons & highlights */
+  
+  /* Standard UI colors */
   --background: 0 0% 100%;
   --foreground: 20 14.3% 4.1%;
   --muted: 60 4.8% 95.9%;
@@ -15,38 +22,39 @@
   --card-foreground: 20 14.3% 4.1%;
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
-  --primary: 216 70% 24%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 152 50% 35%;
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 25 87% 57%;
-  --accent-foreground: 60 9.1% 97.8%;
+  --primary: 148 38% 17%;    /* #1B3C2F - Forest */
+  --primary-foreground: 100 5% 96%;  /* #F5F7F4 - Ivory */
+  --secondary: 121 20% 61%;  /* #8BAE89 - Sage */
+  --secondary-foreground: 148 38% 17%; /* #1B3C2F - Forest */
+  --accent: 36 89% 63%;      /* #F6B04D - Amber */
+  --accent-foreground: 148 38% 17%; /* #1B3C2F - Forest */
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 20 14.3% 4.1%;
+  --destructive-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
+  --ring: 148 38% 17%;    /* #1B3C2F - Forest */
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --primary: 216 70% 24%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 152 50% 35%;
-  --secondary-foreground: 0 0% 98%;
-  --accent: 25 87% 57%;
-  --accent-foreground: 0 0% 98%;
+  /* Dark mode variants that still use the NPS color palette */
+  --background: 148 38% 10%;  /* Darker forest */
+  --foreground: 100 5% 96%;   /* Ivory */
+  --muted: 148 20% 20%;       /* Muted forest */
+  --muted-foreground: 121 10% 70%; /* Lighter sage */
+  --popover: 148 38% 10%;     /* Darker forest */
+  --popover-foreground: 100 5% 96%; /* Ivory */
+  --card: 148 38% 13%;        /* Slightly lighter forest */
+  --card-foreground: 100 5% 96%; /* Ivory */
+  --border: 148 20% 25%;      /* Border forest */
+  --input: 148 20% 25%;       /* Input forest */
+  --primary: 148 38% 17%;     /* #1B3C2F - Forest */
+  --primary-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
+  --secondary: 121 20% 50%;   /* Darker sage */
+  --secondary-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
+  --accent: 36 89% 63%;       /* #F6B04D - Amber */
+  --accent-foreground: 148 38% 17%; /* #1B3C2F - Forest */
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --ring: 240 4.9% 83.9%;
+  --destructive-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
+  --ring: 121 20% 50%;        /* Darker sage */
   --radius: 0.5rem;
 }
 
@@ -69,7 +77,7 @@
 }
 
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1530968534438-cc568c8f25c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-image: linear-gradient(rgba(27, 60, 47, 0.7), rgba(27, 60, 47, 0.7)), url('https://images.unsplash.com/photo-1530968534438-cc568c8f25c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-position: center;
 }
