@@ -35,10 +35,10 @@ export default function ServicePage({ service }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <Link href="/#services">
-              <a className="inline-flex items-center text-primary hover:text-primary-dark transition-colors">
+              <span className="inline-flex items-center text-[#295231] hover:text-amber-500 transition-colors cursor-pointer">
                 <ChevronLeft className="w-4 h-4 mr-1" />
                 Back to All Services
-              </a>
+              </span>
             </Link>
           </div>
 
@@ -52,14 +52,14 @@ export default function ServicePage({ service }: ServicePageProps) {
                 />
                 
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold text-primary mb-4">{service.name} Control</h2>
+                  <h2 className="text-3xl font-bold text-[#295231] mb-4">{service.name} Control</h2>
                   
                   <div className="prose max-w-none mb-6">
                     <p>{service.longDescription}</p>
                   </div>
                   
                   <div className="mb-8">
-                    <h3 className="text-xl font-bold text-primary mb-4">Common {service.name} Problems</h3>
+                    <h3 className="text-xl font-bold text-[#295231] mb-4">Common {service.name} Problems</h3>
                     <ul className="space-y-2">
                       {service.problems.map((problem, index) => (
                         <li key={index} className="flex items-start">
@@ -71,7 +71,7 @@ export default function ServicePage({ service }: ServicePageProps) {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-bold text-primary mb-4">Our {service.name} Control Solutions</h3>
+                    <h3 className="text-xl font-bold text-[#295231] mb-4">Our {service.name} Control Solutions</h3>
                     <ul className="space-y-3">
                       {service.solutions.map((solution, index) => (
                         <li key={index} className="flex items-start">
