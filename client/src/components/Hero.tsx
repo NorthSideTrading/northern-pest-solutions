@@ -9,37 +9,29 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, showButtons = true }: HeroProps) {
   return (
-    <section className="relative bg-nps-forest text-nps-ivory hero-section">
-      <div className="absolute inset-0 bg-nps-forest opacity-70"></div>
+    <section className="relative bg-nps-forest text-nps-ivory hero-section overflow-hidden">
+      <div className="absolute inset-0 bg-nps-forest opacity-90"></div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          width="600" 
-          height="600" 
-          viewBox="0 0 600 600"
-          className="w-full max-w-5xl scale-125"
+          viewBox="0 0 200 200"
+          className="absolute right-0 top-1/2 -translate-y-1/2 h-96 w-96 text-white opacity-[0.07]"
           aria-hidden="true"
         >
           {/* Compass circle */}
-          <circle cx="300" cy="240" r="180" stroke="#FFFFFF" strokeWidth="20" fill="transparent" opacity="0.25"/>
-          
-          {/* North-South pointer */}
-          <path d="M300 40 L300 100 M300 380 L300 440" stroke="#FFFFFF" strokeWidth="20" fill="none" opacity="0.25"/>
-          
-          {/* East-West pointer */}
-          <path d="M100 240 L180 240 M420 240 L500 240" stroke="#FFFFFF" strokeWidth="20" fill="none" opacity="0.25"/>
+          <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="8" fill="transparent"/>
           
           {/* Bug silhouette */}
-          <path d="M300 140 L260 180 L340 180 Z" fill="#FFFFFF" opacity="0.25"/> {/* Head */}
-          <ellipse cx="300" cy="240" rx="50" ry="80" fill="#FFFFFF" opacity="0.25"/> {/* Body */}
-          <ellipse cx="300" cy="240" rx="15" ry="40" fill="#F6B04D" opacity="0.35"/> {/* Orange center */}
+          <path d="M100 60 L80 80 L120 80 Z" fill="currentColor"/> {/* Head */}
+          <ellipse cx="100" cy="110" rx="25" ry="40" fill="currentColor"/> {/* Body */}
+          <ellipse cx="100" cy="110" rx="8" ry="25" fill="#F6B04D" opacity="0.6"/> {/* Orange center */}
           
           {/* Legs */}
-          <path d="M260 200 L210 180 M260 280 L210 300 M340 200 L390 180 M340 280 L390 300" stroke="#FFFFFF" strokeWidth="12" fill="none" opacity="0.25"/>
+          <path d="M80 95 L55 85 M80 125 L55 135 M120 95 L145 85 M120 125 L145 135" stroke="currentColor" strokeWidth="5" fill="none"/>
           
-          {/* Text */}
-          <text x="300" y="480" fontFamily="Arial, sans-serif" fontSize="80" fontWeight="bold" textAnchor="middle" fill="#FFFFFF" opacity="0.25">NORTHERN</text>
-          <text x="300" y="550" fontFamily="Arial, sans-serif" fontSize="50" textAnchor="middle" fill="#FFFFFF" opacity="0.25">PEST SOLUTIONS</text>
+          {/* Compass pointers */}
+          <path d="M100 30 L100 45 M100 155 L100 170 M30 100 L45 100 M155 100 L170 100" stroke="currentColor" strokeWidth="8" fill="none"/>
         </svg>
       </div>
       <div className="relative container mx-auto px-4 py-32 md:py-48 lg:py-52">
