@@ -72,7 +72,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-nps-ivory text-foreground;
+    @apply font-sans antialiased bg-[var(--nps-ivory)] text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -82,15 +82,23 @@
   body {
     font-family: 'Roboto', sans-serif;
   }
+  
+  section {
+    @apply py-16 px-6 md:px-10;
+  }
+  
+  .section-tint {
+    @apply bg-[var(--nps-sage)]/10;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-nps-amber text-nps-forest rounded-full hover:bg-nps-amber/90 font-medium py-2 px-6 inline-flex items-center justify-center transition-colors;
+    @apply bg-nps-amber text-nps-forest rounded-full font-semibold px-5 py-2 hover:bg-nps-amber/90 transition;
   }
   
   .btn-outline {
-    @apply border border-nps-amber text-nps-amber hover:bg-nps-amber/10 rounded-full font-medium py-2 px-6 inline-flex items-center justify-center transition-colors;
+    @apply border border-nps-amber text-nps-amber rounded-full font-semibold px-5 py-2 hover:bg-nps-amber/10 transition;
   }
 }
 

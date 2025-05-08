@@ -12,15 +12,17 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-nps-forest text-nps-ivory sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto px-4 py-5">
+    <header className="bg-[var(--nps-forest)]/95 text-white sticky top-0 z-50 drop-shadow-md h-16">
+      <div className="container mx-auto px-4 h-full flex items-center">
         <div className="flex items-center justify-between">
-          {/* Logo - Simple Orange Line */}
+          {/* Logo and Brand */}
           <div className="flex items-center">
             <Link href="/">
-              <div className="flex items-center cursor-pointer">
-                <img src="/assets/logo.png" alt="Northern Pest Solutions logo" className="h-9 w-auto mr-3" />
-                <span className="text-nps-ivory text-lg font-medium">Northern Pest Solutions</span>
+              <div className="flex items-center space-x-2">
+                <img src="assets/logo.png"
+                     alt="Northern Pest Solutions logo"
+                     className="h-10 w-auto shrink-0 max-h-[40px]"/>
+                <span className="text-xl font-semibold text-white hidden sm:inline">Northern Pest Solutions</span>
               </div>
             </Link>
           </div>
@@ -42,28 +44,28 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-6">
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
-                <span className="font-medium hover:text-nps-amber transition-colors cursor-pointer">{item.name}</span>
+                <span className="text-base font-medium text-white hover:text-[var(--nps-amber)] transition cursor-pointer">{item.name}</span>
               </Link>
             ))}
             
             {/* CTA Button */}
             <Button 
-              className="btn-primary"
+              className="rounded-full px-4 py-2 bg-[var(--nps-amber)] text-[var(--nps-forest)] font-semibold hover:bg-[var(--nps-amber)]/90"
             >
-              Get a Quote
+              Get Quote
             </Button>
           </nav>
         </div>
         
         {/* Mobile Navigation */}
         <div 
-          className={`md:hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}
+          className={`md:hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out absolute top-16 left-0 right-0 bg-[var(--nps-forest)]`}
         >
-          <nav className="flex flex-col space-y-4 py-4">
+          <nav className="flex flex-col space-y-4 py-4 px-4">
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
                 <span 
-                  className="font-medium hover:text-nps-amber transition-colors cursor-pointer block"
+                  className="text-base font-medium text-white hover:text-[var(--nps-amber)] transition cursor-pointer block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -71,9 +73,9 @@ export default function Header() {
               </Link>
             ))}
             <Button 
-              className="btn-primary mt-2 w-full"
+              className="rounded-full px-4 py-2 bg-[var(--nps-amber)] text-[var(--nps-forest)] font-semibold hover:bg-[var(--nps-amber)]/90 mt-2 w-full"
             >
-              Get a Quote
+              Get Quote
             </Button>
           </nav>
         </div>

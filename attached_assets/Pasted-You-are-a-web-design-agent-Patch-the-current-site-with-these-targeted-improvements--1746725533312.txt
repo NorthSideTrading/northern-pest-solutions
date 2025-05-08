@@ -1,0 +1,40 @@
+You are a web‑design agent. Patch the current site with these targeted improvements:
+
+──────────────────────────
+1. LOGO FIX
+   • Verify file path is exactly `assets/logo.png`.  
+   • Replace the current `<img>` with:
+     ```html
+     <a href="/" class="flex items-center space-x-2">
+       <img src="assets/logo.png"
+            alt="Northern Pest Solutions logo"
+            class="h-10 w-auto shrink-0"/>
+       <span class="text-xl font-semibold text-white hidden sm:inline">Northern Pest Solutions</span>
+     </a>
+     ```
+   • Ensure `max-height: 40px` on mobile so it doesn’t force nav bar tall.
+
+2. NAV BAR REFINEMENT
+   • Height: `h-16` (64 px).  
+   • Background: `bg-[var(--nps-forest)]/95` (slightly translucent for depth).  
+   • Add `drop-shadow-md` to separate from hero.  
+   • Right‑side links: `space-x-6 text-base font-medium text-white hover:text-[var(--nps-amber)] transition`.  
+   • CTA button “Get Quote”: `rounded-full px-4 py-2 bg-[var(--nps-amber)] text-[var(--nps-forest)] font-semibold hover:bg-[var(--nps-amber)]/90`.  
+   • Hamburger (≤ 768 px): compact 3‑bar icon; slide‑down menu (`bg-[var(--nps-forest)]`).
+
+3. HERO CLEAN‑UP
+   • Background overlay: `bg-[var(--nps-forest)]/70` instead of /90.  
+   • Add a subtle radial gradient on top: `bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,.4)_100%)]`.  
+   • Limit height to `min-h-[70vh] md:min-h-[65vh]`.  
+   • Headline class: `text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight max-w-3xl`.  
+   • Sub‑headline: `mt-6 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl`.
+
+4. SECTION SPACING + COLORS
+   • Global body background: `bg-[var(--nps-ivory)]`.  
+   • Sections: `py-16 px-6 md:px-10`.  
+   • Alternate section tint: `bg-[var(--nps-sage)]/10`.
+
+5. BUTTON / LINK UTILITIES  (add to global CSS)
+   ```css
+   .btn-primary { @apply bg-[var(--nps-amber)] text-[var(--nps-forest)] rounded-full font-semibold px-5 py-2 hover:bg-[var(--nps-amber)]/90 transition; }
+   .btn-outline { @apply border-[var(--nps-amber)] text-[var(--nps-amber)] rounded-full font-semibold px-5 py-2 hover:bg-[var(--nps-amber)]/10 transition; }
