@@ -19,17 +19,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                {/* Simple compass logo */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" className="mr-3" aria-hidden="true">
-                  {/* Compass circle */}
-                  <circle cx="50" cy="50" r="45" stroke="#FFFFFF" strokeWidth="2" fill="transparent"/>
-                  
-                  {/* Center bug */}
-                  <circle cx="50" cy="50" r="6" fill="#F6B04D"/>
-                  
-                  {/* Bug body silhouette (small) */}
-                  <ellipse cx="50" cy="50" rx="3" ry="10" fill="#FFFFFF"/>
-                </svg>
+                <img src="/assets/logo.png" alt="Northern Pest Solutions logo" className="h-9 w-auto mr-3" />
                 <span className="text-nps-ivory text-lg font-medium">Northern Pest Solutions</span>
               </div>
             </Link>
@@ -58,7 +48,7 @@ export default function Header() {
             
             {/* CTA Button */}
             <Button 
-              className="bg-nps-amber hover:bg-nps-amber/90 text-nps-forest font-medium rounded-lg transition-colors"
+              className="btn-primary"
             >
               Get a Quote
             </Button>
@@ -81,7 +71,7 @@ export default function Header() {
               </Link>
             ))}
             <Button 
-              className="bg-nps-amber hover:bg-nps-amber/90 text-nps-forest font-medium rounded-lg transition-colors mt-2 w-full"
+              className="btn-primary mt-2 w-full"
             >
               Get a Quote
             </Button>
