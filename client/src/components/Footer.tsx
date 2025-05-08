@@ -72,7 +72,7 @@ export default function Footer() {
           
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Contact Info</h4>
+            <h4 className="text-lg font-bold mb-4 text-[var(--nps-amber)]">Contact Info</h4>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 text-[var(--nps-amber)]" />
