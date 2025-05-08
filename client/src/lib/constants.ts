@@ -1,0 +1,281 @@
+export const COMPANY_INFO = {
+  name: "Northern Pest Solutions",
+  tagline: "a solution you can trust.",
+  phone: "(207) 629-8348",
+  email: "info@northernpestsolutions.com",
+  serviceArea: "Serving homes & businesses across Central Maine.",
+  hours: "Open 24 hours."
+};
+
+export const NAVIGATION = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/#services" },
+  { name: "About", href: "/#about" },
+  { name: "Testimonials", href: "/#testimonials" },
+  { name: "Contact", href: "/#contact" }
+];
+
+export const SERVICES = [
+  {
+    id: "ants",
+    name: "Ants",
+    description: "Effective ant control solutions to keep your home or business ant-free.",
+    image: "https://pixabay.com/get/gad297de467b5c3741357580a140d0b2da49f7160896e68c61c0ec44c05edd6e18004ca08f22617f879a2eed2bbbbe07df901adce5b263fb87e570bfb0e0da867_1280.jpg",
+    longDescription: "Ants are among the most common household pests in Maine. Our comprehensive ant control service tackles infestations at their source, eliminating colonies and preventing their return with targeted treatments and preventive measures.",
+    problems: [
+      "Kitchen and food storage contamination",
+      "Structural damage (especially with carpenter ants)",
+      "Garden and landscape damage",
+      "Painful bites from certain species"
+    ],
+    solutions: [
+      "Thorough inspection to identify ant species and entry points",
+      "Targeted treatments to eliminate colonies",
+      "Preventive barrier treatments",
+      "Exclusion techniques to seal entry points",
+      "Customized ongoing protection plans"
+    ]
+  },
+  {
+    id: "bed-bugs",
+    name: "Bed Bugs",
+    description: "Comprehensive bed bug elimination to restore comfort to your living spaces.",
+    image: "https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Bed bugs are resilient pests that require professional intervention. Our multi-step bed bug treatment process ensures complete elimination of these persistent parasites from your home or lodging establishment.",
+    problems: [
+      "Painful, itchy bites that can cause allergic reactions",
+      "Sleep disturbances and anxiety",
+      "Rapid spread throughout homes",
+      "Ability to survive for months without feeding",
+      "Resistance to many DIY treatments"
+    ],
+    solutions: [
+      "Comprehensive inspection of all potential harborage areas",
+      "Heat treatments for severe infestations",
+      "Targeted application of professional-grade insecticides",
+      "Dust applications for voids and electrical outlets",
+      "Follow-up inspections to ensure complete elimination"
+    ]
+  },
+  {
+    id: "cockroaches",
+    name: "Cockroaches",
+    description: "Effective cockroach elimination strategies to safeguard your health and property.",
+    image: "https://images.unsplash.com/photo-1589223471952-da979120116c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Cockroaches are more than just a nuisance - they're a serious health hazard. Our cockroach control services utilize integrated pest management techniques to eliminate existing populations and prevent future infestations.",
+    problems: [
+      "Spread of bacteria and pathogens",
+      "Triggering of asthma and allergies",
+      "Contamination of food and preparation surfaces",
+      "Rapid reproduction rates",
+      "Unpleasant odors in infested areas"
+    ],
+    solutions: [
+      "Detailed inspection to identify species and harborage areas",
+      "Targeted gel baits and insect growth regulators",
+      "Dust treatments for cracks, crevices, and voids",
+      "Sanitation recommendations to prevent recurrence",
+      "Monitoring programs for commercial properties"
+    ]
+  },
+  {
+    id: "fleas",
+    name: "Fleas",
+    description: "Comprehensive flea control for your home and protection for your pets.",
+    image: "https://images.unsplash.com/photo-1583336663277-620dc1996580?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Fleas cause discomfort for both pets and people with their itchy bites and ability to spread quickly throughout homes. Our flea control strategies address adult fleas, larvae, and eggs to break the life cycle and provide lasting relief.",
+    problems: [
+      "Painful, itchy bites on pets and humans",
+      "Potential transmission of diseases",
+      "Rapid spread throughout carpets and upholstery",
+      "Stress and discomfort for pets",
+      "Difficult-to-break life cycle with multiple stages"
+    ],
+    solutions: [
+      "Interior treatments focusing on pet resting areas",
+      "Application of insect growth regulators to prevent reproduction",
+      "Targeted treatments for carpets, furniture, and cracks",
+      "Exterior treatments for yard areas where pets frequent",
+      "Recommendations for concurrent pet treatment"
+    ]
+  },
+  {
+    id: "mice-rats",
+    name: "Mice & Rats",
+    description: "Effective rodent control and prevention strategies for your property.",
+    image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Rodents can cause significant damage to homes and businesses while posing serious health risks. Our comprehensive rodent control approach combines exclusion, trapping, and preventive measures to create a rodent-free environment.",
+    problems: [
+      "Structural damage from gnawing and nest-building",
+      "Fire hazards from chewed electrical wiring",
+      "Contamination of food and surfaces",
+      "Spread of diseases through droppings and urine",
+      "Rapid reproduction rates"
+    ],
+    solutions: [
+      "Thorough inspection to identify entry points and activity areas",
+      "Exclusion work to seal entry points with appropriate materials",
+      "Strategic placement of traps and bait stations",
+      "Removal of existing rodents and nests",
+      "Ongoing monitoring for new activity"
+    ]
+  },
+  {
+    id: "mosquitoes",
+    name: "Mosquitoes",
+    description: "Reclaim your outdoor spaces with effective mosquito control services.",
+    image: "https://images.unsplash.com/photo-1584466769623-4c33987154e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Maine's mosquito season can make outdoor activities unpleasant and potentially dangerous. Our mosquito control programs target breeding sites and adult populations to significantly reduce mosquito activity around your property.",
+    problems: [
+      "Painful, itchy bites that can cause allergic reactions",
+      "Transmission of diseases like West Nile virus",
+      "Interference with outdoor activities and enjoyment",
+      "Rapid breeding in standing water",
+      "Particularly problematic during Maine summers"
+    ],
+    solutions: [
+      "Property assessment to identify breeding sites",
+      "Treatment of standing water with larvicides",
+      "Barrier treatments for vegetation where adults rest",
+      "Misting systems for ongoing protection",
+      "Educational guidance on reducing breeding sites"
+    ]
+  },
+  {
+    id: "snakes",
+    name: "Snakes",
+    description: "Professional snake removal and exclusion for peace of mind.",
+    image: "https://images.unsplash.com/photo-1531386151447-fd76ad50012f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "While most snakes in Maine are non-venomous, their presence can still be concerning for homeowners. Our snake control services focus on humane removal and exclusion methods to keep these reptiles out of your living spaces.",
+    problems: [
+      "Fear and anxiety for residents",
+      "Potential for encounters in basements, garages, and yards",
+      "Attraction to rodent populations around properties",
+      "Difficulty in locating and removing without professional help"
+    ],
+    solutions: [
+      "Identification of snake species and activity patterns",
+      "Humane trapping and removal",
+      "Habitat modification to make areas less attractive",
+      "Exclusion measures to prevent entry into structures",
+      "Rodent control to eliminate food sources"
+    ]
+  },
+  {
+    id: "spiders",
+    name: "Spiders",
+    description: "Eliminate spiders and web formations with our specialized treatments.",
+    image: "https://images.unsplash.com/photo-1557800634-7bf3c7305596?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "While most spiders are beneficial, their presence inside homes can be unwelcome. Our spider control program focuses on web removal, perimeter treatments, and exclusion methods to keep spiders outdoors where they belong.",
+    problems: [
+      "Unsightly webs in and around homes",
+      "Fear and anxiety for residents",
+      "Potential for bites from certain species",
+      "Indicator of other insect problems (their food source)"
+    ],
+    solutions: [
+      "Identification of spider species present",
+      "Removal of existing webs and egg sacs",
+      "Targeted treatments for harborage areas",
+      "Perimeter treatments to prevent entry",
+      "Recommendations for reducing attractive conditions"
+    ]
+  },
+  {
+    id: "stinging-insects",
+    name: "Stinging Insects",
+    description: "Safe removal of wasps, hornets, and other stinging insect nests.",
+    image: "https://images.unsplash.com/photo-1601880348117-25c1127a95df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    longDescription: "Stinging insects like wasps, hornets, and yellow jackets can pose serious health risks, especially for allergic individuals. Our stinging insect control services provide safe, effective removal of nests and colonies from your property.",
+    problems: [
+      "Painful stings that can cause severe allergic reactions",
+      "Aggressive defense of nests, particularly in late summer",
+      "Nests in eaves, attics, and other building structures",
+      "Interference with outdoor activities",
+      "Potential for multiple stings when nests are disturbed"
+    ],
+    solutions: [
+      "Identification of species and nest locations",
+      "Safe, professional removal of active nests",
+      "Protective equipment and techniques to prevent stings",
+      "Preventive treatments for potential nest sites",
+      "Recommendations for reducing attractants"
+    ]
+  },
+  {
+    id: "ticks",
+    name: "Ticks",
+    description: "Protect your family and pets from tick-borne diseases with our control methods.",
+    image: "https://pixabay.com/get/gd333c033479abdd77b6595122b18da388ecb86f4e65f8768ea6c8f98295b22ae9a0c57d9d22170f3cf1e8bb9a6fe5cdfcc10ef8f7f06dbef0fc284b4eba23d95_1280.jpg",
+    longDescription: "Ticks pose serious health risks in Maine as carriers of Lyme disease and other illnesses. Our tick control program targets both adults and nymphs in your yard to significantly reduce exposure risks for your family and pets.",
+    problems: [
+      "Transmission of Lyme disease and other serious illnesses",
+      "Difficult to detect due to small size",
+      "Prevalence in wooded and grassy areas around homes",
+      "Risk to both humans and pets",
+      "Increasing populations in Maine"
+    ],
+    solutions: [
+      "Property assessment to identify tick habitats",
+      "Targeted treatments for lawn perimeters and wooded edges",
+      "Barrier treatments for vegetation and transition zones",
+      "Recommendations for landscape modifications",
+      "Seasonal applications timed for maximum effectiveness"
+    ]
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    text: "Northern Pest Solutions responded quickly to our ant problem. The technician was professional and thorough, explaining everything they were doing. Our ant issue was resolved completely!",
+    author: "Sarah M., Waterville",
+    rating: 5
+  },
+  {
+    id: 2,
+    text: "We've been using Northern Pest Solutions for our business for over 2 years. Their preventative treatments have kept our restaurant pest-free, which is crucial for our reputation.",
+    author: "John D., Augusta",
+    rating: 5
+  },
+  {
+    id: 3,
+    text: "When we discovered a mouse problem in our home, we called Northern Pest Solutions. They came the same day, set up safe traps, and helped us seal entry points. Excellent service!",
+    author: "Lisa T., Bangor",
+    rating: 5
+  }
+];
+
+export const SERVICE_AREAS = [
+  "Augusta",
+  "Waterville",
+  "Bangor",
+  "Belfast",
+  "Brunswick",
+  "Skowhegan",
+  "Farmington",
+  "Rockland"
+];
+
+export const FEATURES = [
+  {
+    icon: "Clock",
+    title: "24/7 Availability",
+    description: "Open 24 hours to handle pest emergencies whenever they occur."
+  },
+  {
+    icon: "Shield",
+    title: "Safe & Effective",
+    description: "Our treatments are effective against pests while being safe for your family and pets."
+  },
+  {
+    icon: "Map",
+    title: "Local Expertise",
+    description: "Specialized knowledge of Central Maine pest issues and effective solutions."
+  },
+  {
+    icon: "Users",
+    title: "Professional Team",
+    description: "Trained and certified technicians with years of pest control experience."
+  }
+];
