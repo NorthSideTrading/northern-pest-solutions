@@ -19,8 +19,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                <img src="/assets/orange-line-logo.svg" alt="" className="h-8 mr-3" />
-                <span className="text-white text-lg font-medium">Northern Pest Solutions</span>
+                <img src="/assets/northern-pest-logo-horizontal.svg" alt="Northern Pest Solutions" className="h-10" />
               </div>
             </Link>
           </div>
