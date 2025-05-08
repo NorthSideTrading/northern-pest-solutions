@@ -60,7 +60,7 @@ export default function ContactForm() {
             id="name" 
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary" 
+            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-[var(--nps-amber)]" 
             placeholder="Your Name"
             required
           />
@@ -73,7 +73,7 @@ export default function ContactForm() {
             id="phone" 
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary" 
+            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-[var(--nps-amber)]" 
             placeholder="Your Phone Number"
             required
           />
@@ -87,7 +87,7 @@ export default function ContactForm() {
           id="email" 
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary" 
+          className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-[var(--nps-amber)]" 
           placeholder="Your Email Address"
           required
         />
@@ -96,7 +96,7 @@ export default function ContactForm() {
       <div className="mb-6">
         <Label htmlFor="service" className="block text-gray-700 mb-2 font-medium">Service Needed</Label>
         <Select value={formData.service} onValueChange={handleSelectChange}>
-          <SelectTrigger id="service" className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary">
+          <SelectTrigger id="service" className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-[var(--nps-amber)]">
             <SelectValue placeholder="Select a Service" />
           </SelectTrigger>
           <SelectContent>
@@ -116,7 +116,7 @@ export default function ContactForm() {
           rows={4} 
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-primary" 
+          className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-[var(--nps-amber)]" 
           placeholder="Describe your pest issue..."
           required
         />
@@ -124,7 +124,7 @@ export default function ContactForm() {
       
       <Button 
         type="submit" 
-        className="w-full bg-accent hover:bg-accent-dark text-white font-medium py-3 px-6 rounded-lg transition-colors"
+        className="w-full btn-primary py-3 px-6"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
