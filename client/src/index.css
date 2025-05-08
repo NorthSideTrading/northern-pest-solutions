@@ -87,6 +87,10 @@
     @apply py-16 px-6 md:px-10;
   }
   
+  main {
+    @apply pt-16; /* Add padding-top equal to header height */
+  }
+  
   .section-tint {
     @apply bg-[var(--nps-sage)]/10;
   }

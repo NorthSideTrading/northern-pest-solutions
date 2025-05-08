@@ -22,7 +22,7 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
       </div>
       <div className="relative container mx-auto px-4 py-20 md:py-28 lg:py-32">
         <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight max-w-3xl">{title}</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[var(--nps-ivory)] leading-tight max-w-3xl">{title}</h1>
           <p className="mt-6 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl">{subtitle}</p>
           
           {showButtons && (
@@ -33,7 +33,7 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
                 </Button>
               </Link>
               <Link href="#contact-form">
-                <Button className="rounded-full px-5 py-2 border border-[var(--nps-amber)] text-[var(--nps-amber)] font-semibold hover:bg-[var(--nps-amber)]/10 transition text-lg">
+                <Button className="btn-outline text-lg">
                   Contact Us
                 </Button>
               </Link>
