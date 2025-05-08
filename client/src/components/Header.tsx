@@ -19,7 +19,25 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                <div className="h-8 w-1.5 bg-[#F29D38] mr-3"></div>
+                {/* Bug in compass logo */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" className="mr-3" aria-hidden="true">
+                  {/* Compass circle */}
+                  <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="4" fill="transparent"/>
+                  
+                  {/* North-South pointer */}
+                  <path d="M50 10 L50 30 M50 70 L50 90" stroke="white" strokeWidth="4" fill="none"/>
+                  
+                  {/* East-West pointer */}
+                  <path d="M10 50 L30 50 M70 50 L90 50" stroke="white" strokeWidth="4" fill="none"/>
+                  
+                  {/* Bug silhouette */}
+                  <path d="M50 30 L40 40 L60 40 Z" fill="white" /> {/* Head */}
+                  <ellipse cx="50" cy="50" rx="10" ry="15" fill="white" /> {/* Body */}
+                  <ellipse cx="50" cy="50" rx="3" ry="8" fill="#F29D38" /> {/* Orange center */}
+                  
+                  {/* Legs */}
+                  <path d="M42 45 L32 40 M42 55 L32 60 M58 45 L68 40 M58 55 L68 60" stroke="white" strokeWidth="3" fill="none"/>
+                </svg>
                 <span className="text-white text-lg font-medium">Northern Pest Solutions</span>
               </div>
             </Link>
