@@ -19,7 +19,16 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <div className="flex items-center cursor-pointer">
-                <img src="/assets/northern-pest-logo-horizontal.svg" alt="Northern Pest Solutions" className="h-10" />
+                <svg width="40" height="40" viewBox="0 0 100 100" className="mr-3">
+                  <circle cx="50" cy="50" r="40" stroke="#295231" strokeWidth="5" fill="transparent"/>
+                  <path d="M50 0 L50 20 M50 80 L50 100" stroke="#295231" strokeWidth="5" fill="none"/>
+                  <path d="M0 50 L20 50 M80 50 L100 50" stroke="#295231" strokeWidth="5" fill="none"/>
+                  <path d="M50 30 L40 40 L60 40 Z" fill="#295231" />
+                  <ellipse cx="50" cy="50" rx="10" ry="16" fill="#295231" />
+                  <ellipse cx="50" cy="50" rx="3" ry="8" fill="#F29D38" />
+                  <path d="M42 45 L32 40 M42 55 L32 60 M58 45 L68 40 M58 55 L68 60" stroke="#295231" strokeWidth="3" fill="none"/>
+                </svg>
+                <span className="text-white text-lg font-medium">Northern Pest Solutions</span>
               </div>
             </Link>
           </div>

@@ -13,7 +13,17 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <img src="/assets/northern-pest-logo.svg" alt="Northern Pest Solutions logo" className="h-36 w-auto" />
+              <svg width="240" height="200" viewBox="0 0 240 200" className="w-36 h-auto">
+                <circle cx="120" cy="80" r="50" stroke="#295231" strokeWidth="5" fill="transparent"/>
+                <path d="M120 20 L120 45 M120 115 L120 140" stroke="#295231" strokeWidth="5" fill="none"/>
+                <path d="M60 80 L85 80 M155 80 L180 80" stroke="#295231" strokeWidth="5" fill="none"/>
+                <path d="M120 55 L110 65 L130 65 Z" fill="#295231" />
+                <ellipse cx="120" cy="80" rx="12" ry="20" fill="#295231" />
+                <ellipse cx="120" cy="80" rx="4" ry="10" fill="#F29D38" />
+                <path d="M112 75 L102 70 M112 85 L102 90 M128 75 L138 70 M128 85 L138 90" stroke="#295231" strokeWidth="3" fill="none"/>
+                <text x="120" y="160" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" textAnchor="middle" fill="#295231">NORTHERN</text>
+                <text x="120" y="185" fontFamily="Arial, sans-serif" fontSize="16" textAnchor="middle" fill="#295231">PEST SOLUTIONS</text>
+              </svg>
             </div>
             <p className="mb-4 text-sm">
               A professional pest control company serving Central Maine with effective and reliable pest management services.
