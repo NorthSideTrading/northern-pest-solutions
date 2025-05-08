@@ -100,7 +100,7 @@ export default function ContactForm() {
             <SelectValue placeholder="Select a Service" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Select a Service</SelectItem>
+            <SelectItem value="default">Select a Service</SelectItem>
             {SERVICES.map((service) => (
               <SelectItem key={service.id} value={service.id}>{service.name} Control</SelectItem>
             ))}

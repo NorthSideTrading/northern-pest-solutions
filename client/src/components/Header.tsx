@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
-              <a className="flex items-center">
+              <div className="flex items-center cursor-pointer">
                 <div className="h-16 w-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-2xl">
                   NPS
                 </div>
@@ -24,7 +24,7 @@ export default function Header() {
                   <h1 className="text-xl md:text-2xl font-bold text-primary">{COMPANY_INFO.name}</h1>
                   <p className="text-sm italic text-neutral-dark">{COMPANY_INFO.tagline}</p>
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
           
@@ -43,7 +43,7 @@ export default function Header() {
           <nav className="hidden md:flex space-x-8">
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
-                <a className="font-medium hover:text-primary transition-colors">{item.name}</a>
+                <span className="font-medium hover:text-primary transition-colors cursor-pointer">{item.name}</span>
               </Link>
             ))}
           </nav>
@@ -63,12 +63,12 @@ export default function Header() {
           <nav className="flex flex-col space-y-3">
             {NAVIGATION.map((item) => (
               <Link key={item.name} href={item.href}>
-                <a 
-                  className="font-medium hover:text-primary transition-colors"
+                <span 
+                  className="font-medium hover:text-primary transition-colors cursor-pointer block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </span>
               </Link>
             ))}
             <a 
