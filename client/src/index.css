@@ -14,10 +14,10 @@
 
 :root {
   /* Northern Pest Solutions color palette */
-  --nps-forest: #1B3C2F;   /* primary (nav, headings) */
-  --nps-sage: #8BAE89;     /* secondary (background-tint) */
-  --nps-ivory: #F5F7F4;    /* light background / text */
-  --nps-amber: #F6B04D;    /* CTA buttons & highlights */
+  --nps-forest: #1B3C2F;   /* dark green */
+  --nps-amber: #F6B04D;    /* accent */
+  --nps-ivory: #F5F7F4;    /* light bg */
+  --nps-sage: #8BAE89;     /* muted green tint */
   
   /* Standard UI colors */
   --background: 0 0% 100%;
