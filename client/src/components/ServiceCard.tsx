@@ -17,10 +17,10 @@ export default function ServiceCard({ id, name, description, image }: ServiceCar
         <h3 className="text-xl font-bold font-heading text-primary mb-2">{name}</h3>
         <p className="text-neutral-dark mb-4">{description}</p>
         <Link href={`/services/${id}`}>
-          <a className="text-secondary hover:text-secondary-dark font-medium inline-flex items-center transition-colors">
+          <span className="text-secondary hover:text-secondary-dark font-medium inline-flex items-center transition-colors cursor-pointer">
             Learn More
             <ChevronRight className="w-4 h-4 ml-1" />
-          </a>
+          </span>
         </Link>
       </CardContent>
     </Card>
