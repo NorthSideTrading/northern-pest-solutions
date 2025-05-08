@@ -11,6 +11,14 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
   return (
     <section className="relative bg-nps-forest text-nps-ivory hero-section">
       <div className="absolute inset-0 bg-nps-forest opacity-70"></div>
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <img 
+          src="/images/logo-watermark.svg" 
+          alt="" 
+          className="w-full max-w-4xl opacity-10" 
+          aria-hidden="true"
+        />
+      </div>
       <div className="relative container mx-auto px-4 py-32 md:py-48 lg:py-52">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{title}</h1>

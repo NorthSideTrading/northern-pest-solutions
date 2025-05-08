@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <!-- Base colors -->
+  <!-- #1B3C2F - Forest Green -->
+  <!-- #F6B04D - Amber -->
+  
+  <!-- Compass circle -->
+  <circle cx="300" cy="240" r="180" stroke="#1B3C2F" stroke-width="20" fill="transparent" opacity="0.15"/>
+  
+  <!-- North-South pointer -->
+  <path d="M300 40 L300 100 M300 380 L300 440" stroke="#1B3C2F" stroke-width="20" fill="none" opacity="0.15"/>
+  
+  <!-- East-West pointer -->
+  <path d="M100 240 L180 240 M420 240 L500 240" stroke="#1B3C2F" stroke-width="20" fill="none" opacity="0.15"/>
+  
+  <!-- Bug silhouette -->
+  <path d="M300 140 L260 180 L340 180 Z" fill="#1B3C2F" opacity="0.15"/> <!-- Head -->
+  <ellipse cx="300" cy="240" rx="50" ry="80" fill="#1B3C2F" opacity="0.15"/> <!-- Body -->
+  <ellipse cx="300" cy="240" rx="15" ry="40" fill="#F6B04D" opacity="0.15"/> <!-- Orange center -->
+  
+  <!-- Legs -->
+  <path d="M260 200 L210 180 M260 280 L210 300 M340 200 L390 180 M340 280 L390 300" stroke="#1B3C2F" stroke-width="12" fill="none" opacity="0.15"/>
+  
+  <!-- Text -->
+  <text x="300" y="480" font-family="Arial, sans-serif" font-size="80" font-weight="bold" text-anchor="middle" fill="#1B3C2F" opacity="0.15">NORTHERN</text>
+  <text x="300" y="550" font-family="Arial, sans-serif" font-size="50" text-anchor="middle" fill="#1B3C2F" opacity="0.15">PEST SOLUTIONS</text>
+</svg>
