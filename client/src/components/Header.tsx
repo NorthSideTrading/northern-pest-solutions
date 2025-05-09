@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[var(--nps-forest)]/95 backdrop-blur-sm shadow-md h-16">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[var(--nps-forest)] shadow-md h-16">
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo and Brand */}
         <Link href="/" className="flex items-center">
@@ -79,7 +79,7 @@ export default function Header() {
       
       {/* Mobile Navigation */}
       <div 
-        className={`md:hidden ${mobileMenuOpen ? 'max-h-[400px] opacity-100 border-b border-[var(--nps-sage)]/20' : 'max-h-0 opacity-0 border-none'} overflow-hidden transition-all duration-300 absolute w-full bg-[var(--nps-forest)]/95 backdrop-blur-sm`}
+        className={`md:hidden ${mobileMenuOpen ? 'max-h-[400px] opacity-100 border-b border-[var(--nps-sage)]/20' : 'max-h-0 opacity-0 border-none'} overflow-hidden transition-all duration-300 absolute w-full bg-[var(--nps-forest)]`}
       >
         <nav className="container mx-auto px-4 py-5">
           <ul className="flex flex-col space-y-4">
