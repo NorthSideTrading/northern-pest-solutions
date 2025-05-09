@@ -13,8 +13,18 @@ export default function Header() {
   };
   
   const isActive = (path: string) => {
+    // For exact matches
     if (path === '/' && location === '/') return true;
+    
+    // For hash links
+    if (path.includes('#') && location === '/') {
+      const hash = window.location.hash;
+      return hash === path.substring(path.indexOf('#'));
+    }
+    
+    // For non-home pages
     if (path !== '/' && location.startsWith(path)) return true;
+    
     return false;
   };
 

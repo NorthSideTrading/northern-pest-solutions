@@ -15,21 +15,29 @@ export default function Home() {
 
   // Handle scroll to section when hash changes
   useEffect(() => {
-    const hash = location.split('#')[1];
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    
     if (hash) {
-      const element = document.getElementById(hash);
+      // Remove the # symbol
+      const targetId = hash.substring(1);
+      const element = document.getElementById(targetId);
+      
       if (element) {
         // Offset for header height
-        const headerOffset = 80;
+        const headerOffset = 96; // Increased height to account for the taller header
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
         
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        // Smooth scroll to the element
+        setTimeout(() => {
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 100);
       }
-    } else {
+    } else if (location === '/') {
       // Scroll to top when navigating to home page without hash
       window.scrollTo(0, 0);
     }
