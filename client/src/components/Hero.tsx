@@ -38,16 +38,48 @@ export default function Hero({ showButtons = true }: HeroProps) {
           {/* Call to action buttons - styled to match the image */}
           {showButtons && (
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#services">
+              <a 
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const servicesSection = document.getElementById('services');
+                  if (servicesSection) {
+                    const headerHeight = 96;
+                    const elementPosition = servicesSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
                 <Button size="lg" className="bg-[var(--nps-forest)] hover:bg-[var(--nps-forest)]/90 text-white font-medium py-2.5 px-6 rounded-md">
                   Explore Our Services
                 </Button>
-              </Link>
-              <Link href="#contact">
+              </a>
+              <a 
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    const headerHeight = 96;
+                    const elementPosition = contactSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
                 <Button size="lg" variant="outline" className="bg-white text-[var(--nps-amber)] border-white hover:bg-white/90 font-medium py-2.5 px-6 rounded-md">
                   Get a Free Quote
                 </Button>
-              </Link>
+              </a>
             </div>
           )}
         </div>

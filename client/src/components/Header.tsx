@@ -56,30 +56,66 @@ export default function Header() {
               {NAVIGATION.map((item) => {
                 const active = isActive(item.href);
                 return (
-                  <Link 
+                  <a 
                     key={item.name}
                     href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const targetId = item.href.split('#')[1];
+                      if (targetId) {
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                          const headerHeight = 96; // Adjust for header height
+                          const elementPosition = targetElement.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                          
+                          window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                          });
+                        }
+                      } else {
+                        // If no hash, navigate to the base URL
+                        window.scrollTo(0, 0);
+                      }
+                    }}
                     className={`px-1 py-2 text-base font-medium relative ${
                       active 
                         ? 'text-[var(--nps-amber)]' 
                         : 'text-white hover:text-[var(--nps-amber)]'
-                    } transition-colors duration-200`}
+                    } transition-colors duration-200 cursor-pointer`}
                   >
                     {item.name}
                     {active && (
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[var(--nps-amber)]"></span>
                     )}
-                  </Link>
+                  </a>
                 );
               })}
               
-              <Link href="#contact">
+              <a 
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    const headerHeight = 96;
+                    const elementPosition = contactSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
                 <Button 
                   className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-5 py-2 rounded"
                 >
                   Get Quote
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
           
@@ -114,7 +150,7 @@ export default function Header() {
           {NAVIGATION.map((item) => {
             const active = isActive(item.href);
             return (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 text-base font-medium ${
@@ -122,20 +158,61 @@ export default function Header() {
                     ? 'text-[var(--nps-amber)]' 
                     : 'text-white hover:text-[var(--nps-amber)]'
                 } transition-colors duration-200`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileMenuOpen(false);
+                  const targetId = item.href.split('#')[1];
+                  if (targetId) {
+                    setTimeout(() => {
+                      const targetElement = document.getElementById(targetId);
+                      if (targetElement) {
+                        const headerHeight = 96;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                        
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }, 100);
+                  } else {
+                    window.scrollTo(0, 0);
+                  }
+                }}
               >
                 {item.name}
-              </Link>
+              </a>
             );
           })}
           <div className="mt-4 px-3">
-            <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+            <a 
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                setMobileMenuOpen(false);
+                
+                setTimeout(() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    const headerHeight = 96;
+                    const elementPosition = contactSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }, 100);
+              }}
+            >
               <Button 
                 className="w-full bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-4 py-2 rounded"
               >
                 Get Quote
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
