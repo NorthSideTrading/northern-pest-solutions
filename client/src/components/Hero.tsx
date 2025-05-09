@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   title: string;
@@ -9,40 +10,50 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, showButtons = true }: HeroProps) {
   return (
-    <section className="relative text-nps-ivory hero-section overflow-hidden min-h-[50vh] md:min-h-[45vh]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,.25)_100%)]"></div>
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <img 
-          src="/images/logo-watermark.svg" 
-          alt="" 
-          className="absolute right-0 top-1/2 -translate-y-1/2 h-[600px] w-[600px] opacity-25" 
-          aria-hidden="true"
-        />
-      </div>
-      <div className="relative container mx-auto px-4 py-8 md:py-10 lg:py-12">
-        <div className="max-w-2xl pt-10 md:pt-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--nps-ivory)] leading-tight max-w-3xl">
-            Professional Pest<br />
-            Control Services<br />
-            in Central Maine
+    <section className="hero-container">
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-[var(--nps-forest)]/70"></div>
+      
+      {/* Content container */}
+      <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
+        <div className="max-w-3xl">
+          {/* Main headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
+            Professional Pest Control Services
+            <span className="block text-[var(--nps-amber)]">in Central Maine</span>
           </h1>
-          <p className="mt-4 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl">{subtitle}</p>
           
+          {/* Subheadline */}
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mb-8">
+            {subtitle}
+          </p>
+          
+          {/* Call to action buttons */}
           {showButtons && (
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#services">
-                <Button className="btn-primary text-lg">
-                  Our Services
+                <Button size="lg" className="btn-primary text-base group">
+                  Explore Our Services
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <Link href="#contact-form">
-                <Button className="btn-outline text-lg">
-                  Contact Us
+              <Link href="#contact">
+                <Button size="lg" variant="outline" className="btn-outline text-base">
+                  Get a Free Quote
                 </Button>
               </Link>
             </div>
           )}
+          
+          {/* Trust badge */}
+          <div className="flex items-center mt-10 bg-white/10 backdrop-blur-sm p-3 rounded-lg w-fit">
+            <div className="mr-3 bg-[var(--nps-amber)] rounded-full p-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[var(--nps-forest)]">
+                <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-sm font-medium text-white">A trusted solution since 2005</span>
+          </div>
         </div>
       </div>
     </section>
