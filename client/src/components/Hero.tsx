@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, showButtons = true }: HeroProps) {
   return (
-    <section className="relative text-nps-ivory hero-section overflow-hidden min-h-[70vh] md:min-h-[65vh]">
+    <section className="relative text-nps-ivory hero-section overflow-hidden min-h-[60vh] md:min-h-[55vh]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,.25)_100%)]"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
@@ -20,10 +20,10 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
           aria-hidden="true"
         />
       </div>
-      <div className="relative container mx-auto px-4 py-20 md:py-28 lg:py-32">
+      <div className="relative container mx-auto px-4 py-12 md:py-16 lg:py-20">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[var(--nps-ivory)] leading-tight max-w-3xl">{title}</h1>
-          <p className="mt-6 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl">{subtitle}</p>
+          <p className="mt-4 text-xl md:text-2xl text-[var(--nps-ivory)] max-w-2xl">{subtitle}</p>
           
           {showButtons && (
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
