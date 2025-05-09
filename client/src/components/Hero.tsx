@@ -10,6 +10,7 @@ interface HeroProps {
 export default function Hero({ showButtons = true }: HeroProps) {
   return (
     <section 
+      id="home"
       className="hero-container"
       style={{ 
         backgroundImage: 'url("/images/hero-pests.png")',

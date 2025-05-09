@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +7,90 @@ import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
+
+  // Detect which section is currently in view
+  useEffect(() => {
+    // Throttle function to limit how often the scroll handler runs
+    const throttle = (callback: () => void, limit: number) => {
+      let waiting = false;
+      return () => {
+        if (!waiting) {
+          callback();
+          waiting = true;
+          setTimeout(() => {
+            waiting = false;
+          }, limit);
+        }
+      };
+    };
+    
+    const handleScroll = throttle(() => {
+      const scrollPosition = window.scrollY;
+      const headerHeight = 96;
+      const windowHeight = window.innerHeight;
+      
+      // Check sections in reverse order to prioritize the one that's most in view
+      const sections = [
+        { id: 'contact', name: 'contact' },
+        { id: 'about', name: 'about' },
+        { id: 'testimonials', name: 'testimonials' },
+        { id: 'services', name: 'services' },
+        { id: 'home', name: 'home' }
+      ];
+      
+      // By default, home is active if we're at the top
+      if (scrollPosition < 100) {
+        setActiveSection('home');
+        return;
+      }
+      
+      // Find the section that takes up the most space in the viewport
+      let maxVisibleSection = { id: 'home', name: 'home', visibleArea: 0 };
+
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          
+          // Calculate how much of the section is visible in the viewport
+          const visibleTop = Math.max(rect.top, headerHeight);
+          const visibleBottom = Math.min(rect.bottom, windowHeight);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+          
+          // If this section has more visible area than the current max, update it
+          if (visibleHeight > maxVisibleSection.visibleArea) {
+            maxVisibleSection = { 
+              ...section, 
+              visibleArea: visibleHeight 
+            };
+          }
+        }
+      }
+      
+      // Special case for when we're very close to the top
+      if (scrollPosition < 300 && maxVisibleSection.name !== 'home') {
+        const homeElement = document.getElementById('home');
+        if (homeElement && homeElement.getBoundingClientRect().bottom > 0) {
+          setActiveSection('home');
+          return;
+        }
+      }
+      
+      // Set the section with the most visible area as active
+      setActiveSection(maxVisibleSection.name);
+    }, 100); // Throttle to run at most every 100ms
+    
+    // Set initial active section
+    handleScroll();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -15,14 +99,13 @@ export default function Header() {
   const isActive = (path: string) => {
     // For hash links
     if (path.includes('#')) {
-      const hash = window.location.hash;
-      // Only match if the hash is exactly the same
-      return hash === path.substring(path.indexOf('#'));
+      const sectionName = path.substring(path.indexOf('#') + 1);
+      return activeSection === sectionName;
     }
     
-    // For home link, only active when no hash is present
+    // For home link
     if (path === '/') {
-      return window.location.hash === '';
+      return activeSection === 'home';
     }
     
     // For non-home pages
