@@ -28,15 +28,12 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                  src="/images/northern-pest-logo.png"
+                  src="/images/white-logo.png"
                   alt="Northern Pest Solutions logo"
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
-              <div className="ml-4 text-white">
-                <span className="font-semibold text-xl block leading-tight">Northern</span>
-                <span className="font-semibold text-xl block leading-tight">Pest Solutions</span>
-              </div>
+              {/* No text needed since it's in the logo */}
             </Link>
           </div>
           
