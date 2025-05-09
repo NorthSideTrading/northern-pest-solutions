@@ -42,6 +42,9 @@ export default function Hero({ showButtons = true }: HeroProps) {
                 href="#services"
                 onClick={(e) => {
                   e.preventDefault();
+                  // Update the URL hash
+                  window.history.pushState(null, '', '#services');
+                  
                   const servicesSection = document.getElementById('services');
                   if (servicesSection) {
                     const headerHeight = 96;
@@ -63,6 +66,9 @@ export default function Hero({ showButtons = true }: HeroProps) {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
+                  // Update the URL hash
+                  window.history.pushState(null, '', '#contact');
+                  
                   const contactSection = document.getElementById('contact');
                   if (contactSection) {
                     const headerHeight = 96;

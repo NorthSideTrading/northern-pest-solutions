@@ -13,13 +13,16 @@ export default function Header() {
   };
   
   const isActive = (path: string) => {
-    // For exact matches
-    if (path === '/' && location === '/') return true;
-    
     // For hash links
-    if (path.includes('#') && location === '/') {
+    if (path.includes('#')) {
       const hash = window.location.hash;
+      // Only match if the hash is exactly the same
       return hash === path.substring(path.indexOf('#'));
+    }
+    
+    // For home link, only active when no hash is present
+    if (path === '/') {
+      return window.location.hash === '';
     }
     
     // For non-home pages
@@ -63,6 +66,9 @@ export default function Header() {
                       e.preventDefault();
                       const targetId = item.href.split('#')[1];
                       if (targetId) {
+                        // Update the URL hash to reflect the active section
+                        window.history.pushState(null, '', `#${targetId}`);
+                        
                         const targetElement = document.getElementById(targetId);
                         if (targetElement) {
                           const headerHeight = 96; // Adjust for header height
@@ -97,6 +103,9 @@ export default function Header() {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
+                  // Update the URL hash
+                  window.history.pushState(null, '', '#contact');
+                  
                   const contactSection = document.getElementById('contact');
                   if (contactSection) {
                     const headerHeight = 96;
@@ -163,6 +172,9 @@ export default function Header() {
                   setMobileMenuOpen(false);
                   const targetId = item.href.split('#')[1];
                   if (targetId) {
+                    // Update the URL hash to reflect the current section
+                    window.history.pushState(null, '', `#${targetId}`);
+                    
                     setTimeout(() => {
                       const targetElement = document.getElementById(targetId);
                       if (targetElement) {
@@ -191,6 +203,9 @@ export default function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 setMobileMenuOpen(false);
+                
+                // Update the URL hash
+                window.history.pushState(null, '', '#contact');
                 
                 setTimeout(() => {
                   const contactSection = document.getElementById('contact');
