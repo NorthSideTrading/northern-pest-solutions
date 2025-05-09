@@ -88,7 +88,7 @@
   }
   
   main {
-    @apply pt-16; /* Add padding-top equal to header height */
+    @apply pt-20; /* Add padding-top equal to header height */
   }
   
   .section-tint {
