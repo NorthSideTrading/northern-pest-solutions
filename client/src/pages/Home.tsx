@@ -55,7 +55,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Hero 
-        title="Professional Pest Control Services in Central Maine" 
+        title="" 
         subtitle="Protect your home and business from unwanted pests with our trusted and effective solutions."
       />
 
