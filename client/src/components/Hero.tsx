@@ -17,9 +17,9 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
       {/* Logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <img 
-          src="/images/logo-watermark.svg" 
+          src="/watermark.svg" 
           alt="" 
-          className="absolute right-0 translate-x-1/4 h-[600px] w-[600px]" 
+          className="absolute right-0 translate-x-1/4 h-[800px] w-[800px]" 
           aria-hidden="true"
         />
       </div>

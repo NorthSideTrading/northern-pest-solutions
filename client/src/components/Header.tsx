@@ -25,9 +25,9 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <div className="flex items-center space-x-3">
             <img 
-              src="/images/northern-pest-logo.png"
+              src="/logo.svg"
               alt="Northern Pest Solutions logo"
-              className="h-8 w-auto md:h-10 object-contain"
+              className="h-8 w-auto md:h-12 object-contain"
             />
             <span className="text-lg md:text-xl font-semibold text-[var(--nps-ivory)] hidden sm:inline tracking-tight">
               Northern Pest Solutions
