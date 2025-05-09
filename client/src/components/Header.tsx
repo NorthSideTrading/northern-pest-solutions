@@ -25,7 +25,7 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <div className="flex items-center space-x-3">
             <img 
-              src="/images/northern-logo.svg"
+              src="/images/northern-pest-logo.png"
               alt="Northern Pest Solutions logo"
               className="h-8 w-auto md:h-10 object-contain"
             />

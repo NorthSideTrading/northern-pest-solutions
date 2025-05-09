@@ -14,9 +14,9 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="/images/northern-logo.svg"
+                src="/images/northern-pest-logo.png"
                 alt="Northern Pest Solutions logo"
-                className="w-48 h-auto"
+                className="w-48 h-auto bg-white/10 p-2 rounded-lg"
               />
             </div>
             <p className="mb-4 text-sm">
