@@ -22,7 +22,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 w-full bg-[var(--nps-forest)]">
       {/* Main navigation bar */}
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo and company name */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -30,13 +30,10 @@ export default function Header() {
                 <img 
                   src="/images/northern-pest-logo.png"
                   alt="Northern Pest Solutions logo"
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
-              <div className="ml-4 text-white">
-                <span className="font-semibold text-xl block leading-tight">Northern</span>
-                <span className="font-semibold text-xl block leading-tight">Pest Solutions</span>
-              </div>
+              {/* Using the logo with text so we don't need separate text */}
             </Link>
           </div>
           
