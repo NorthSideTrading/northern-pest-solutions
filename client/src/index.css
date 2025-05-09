@@ -15,7 +15,7 @@
 :root {
   /* Northern Pest Solutions color palette */
   --nps-forest: #1B3C2F;   /* dark green */
-  --nps-amber: #F6B04D;    /* accent */
+  --nps-amber: #E6A33A;    /* amber-orange accent from the new image */
   --nps-ivory: #F5F7F4;    /* light bg */
   --nps-sage: #8BAE89;     /* muted green tint */
   
@@ -34,7 +34,7 @@
   --primary-foreground: 100 5% 96%;  /* #F5F7F4 - Ivory */
   --secondary: 121 20% 61%;  /* #8BAE89 - Sage */
   --secondary-foreground: 148 38% 17%; /* #1B3C2F - Forest */
-  --accent: 36 89% 63%;      /* #F6B04D - Amber */
+  --accent: 35 75% 56%;      /* #E6A33A - Amber */
   --accent-foreground: 148 38% 17%; /* #1B3C2F - Forest */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
@@ -58,7 +58,7 @@
   --primary-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
   --secondary: 121 20% 50%;   /* Darker sage */
   --secondary-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
-  --accent: 36 89% 63%;       /* #F6B04D - Amber */
+  --accent: 35 75% 56%;       /* #E6A33A - Amber */
   --accent-foreground: 148 38% 17%; /* #1B3C2F - Forest */
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 100 5% 96%; /* #F5F7F4 - Ivory */
@@ -114,9 +114,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+  background-image: url('/images/hero-background.png');
   background-size: cover;
   background-position: center;
+  background-color: #FDDED6; /* Soft pink background as in the image */
   color: white;
   overflow: hidden;
 }
