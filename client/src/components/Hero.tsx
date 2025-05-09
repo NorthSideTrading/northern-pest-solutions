@@ -9,7 +9,15 @@ interface HeroProps {
 
 export default function Hero({ showButtons = true }: HeroProps) {
   return (
-    <section className="hero-container">
+    <section 
+      className="hero-container"
+      style={{ 
+        backgroundImage: 'url("/images/hero-pests.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: '#FDDED6'
+      }}
+    >
       {/* Content container aligned to the left */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-xl">
