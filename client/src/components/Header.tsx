@@ -28,9 +28,9 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                  src="/images/white-logo.png"
+                  src="/images/northern-pest-logo.png"
                   alt="Northern Pest Solutions logo"
-                  className="h-12 w-auto"
+                  className="h-16 w-auto"
                 />
               </div>
               <div className="ml-4 text-white">
