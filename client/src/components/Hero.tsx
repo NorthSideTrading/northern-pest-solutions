@@ -14,6 +14,16 @@ export default function Hero({ title, subtitle, showButtons = true }: HeroProps)
       {/* Background overlay */}
       <div className="absolute inset-0 bg-[var(--nps-forest)]/70"></div>
       
+      {/* Logo watermark */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+        <img 
+          src="/images/logo-watermark.svg" 
+          alt="" 
+          className="absolute right-0 translate-x-1/4 h-[600px] w-[600px]" 
+          aria-hidden="true"
+        />
+      </div>
+      
       {/* Content container */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-3xl">

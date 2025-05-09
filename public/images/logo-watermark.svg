@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bug in compass logo -->
+  <g fill="#FFFFFF" opacity="0.1">
+    <!-- Compass circle -->
+    <circle cx="300" cy="300" r="250" fill="none" stroke="#FFFFFF" stroke-width="20"/>
+    
+    <!-- Compass points -->
+    <polygon points="300,0 330,100 270,100" />
+    <polygon points="600,300 500,330 500,270" />
+    <polygon points="300,600 270,500 330,500" />
+    <polygon points="0,300 100,270 100,330" />
+    
+    <!-- Bug silhouette -->
+    <path d="M300,170 C280,170 260,180 250,190 C240,180 220,170 200,170 C170,170 150,190 150,220 C150,250 170,270 200,270 C220,270 240,260 250,250 C260,260 280,270 300,270 C320,270 340,260 350,250 C360,260 380,270 400,270 C430,270 450,250 450,220 C450,190 430,170 400,170 C380,170 360,180 350,190 C340,180 320,170 300,170 Z" fill="#FFFFFF" />
+    <ellipse cx="300" cy="350" rx="120" ry="150" fill="#FFFFFF" />
+    
+    <!-- Bug legs -->
+    <path d="M180,250 C160,250 140,270 120,300" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    <path d="M180,300 C160,300 140,330 120,370" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    <path d="M180,350 C160,350 140,380 130,420" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    
+    <path d="M420,250 C440,250 460,270 480,300" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    <path d="M420,300 C440,300 460,330 480,370" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    <path d="M420,350 C440,350 460,380 470,420" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    
+    <!-- Antennas -->
+    <path d="M250,190 C230,170 210,140 200,100" fill="none" stroke="#FFFFFF" stroke-width="15" />
+    <path d="M350,190 C370,170 390,140 400,100" fill="none" stroke="#FFFFFF" stroke-width="15" />
+  </g>
+</svg>
