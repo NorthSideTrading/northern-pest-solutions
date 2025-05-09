@@ -30,10 +30,13 @@ export default function Header() {
                 <img 
                   src="/images/northern-pest-logo.png"
                   alt="Northern Pest Solutions logo"
-                  className="h-20 w-auto"
+                  className="h-16 w-auto"
                 />
               </div>
-              {/* Using the logo with text so we don't need separate text */}
+              <div className="ml-4 text-white">
+                <span className="font-semibold text-xl block leading-tight">Northern</span>
+                <span className="font-semibold text-xl block leading-tight">Pest Solutions</span>
+              </div>
             </Link>
           </div>
           
