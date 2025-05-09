@@ -20,7 +20,7 @@ export const SERVICES = [
     id: "ants",
     name: "Ants",
     description: "Effective ant control solutions to keep your home or business ant-free.",
-    image: "https://pixabay.com/get/gad297de467b5c3741357580a140d0b2da49f7160896e68c61c0ec44c05edd6e18004ca08f22617f879a2eed2bbbbe07df901adce5b263fb87e570bfb0e0da867_1280.jpg",
+    image: "https://images.unsplash.com/photo-1565035010268-a3816f98589a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Ants are among the most common household pests in Maine. Our comprehensive ant control service tackles infestations at their source, eliminating colonies and preventing their return with targeted treatments and preventive measures.",
     problems: [
       "Kitchen and food storage contamination",
@@ -40,7 +40,7 @@ export const SERVICES = [
     id: "bed-bugs",
     name: "Bed Bugs",
     description: "Comprehensive bed bug elimination to restore comfort to your living spaces.",
-    image: "https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1626525589609-91f7d853220d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Bed bugs are resilient pests that require professional intervention. Our multi-step bed bug treatment process ensures complete elimination of these persistent parasites from your home or lodging establishment.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
@@ -61,7 +61,7 @@ export const SERVICES = [
     id: "cockroaches",
     name: "Cockroaches",
     description: "Effective cockroach elimination strategies to safeguard your health and property.",
-    image: "https://images.unsplash.com/photo-1589223471952-da979120116c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1611603308336-d769fab684a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Cockroaches are more than just a nuisance - they're a serious health hazard. Our cockroach control services utilize integrated pest management techniques to eliminate existing populations and prevent future infestations.",
     problems: [
       "Spread of bacteria and pathogens",
@@ -82,7 +82,7 @@ export const SERVICES = [
     id: "fleas",
     name: "Fleas",
     description: "Comprehensive flea control for your home and protection for your pets.",
-    image: "https://images.unsplash.com/photo-1583336663277-620dc1996580?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1598335327906-1be1a69c04fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Fleas cause discomfort for both pets and people with their itchy bites and ability to spread quickly throughout homes. Our flea control strategies address adult fleas, larvae, and eggs to break the life cycle and provide lasting relief.",
     problems: [
       "Painful, itchy bites on pets and humans",
@@ -206,7 +206,7 @@ export const SERVICES = [
     id: "ticks",
     name: "Ticks",
     description: "Protect your family and pets from tick-borne diseases with our control methods.",
-    image: "https://pixabay.com/get/gd333c033479abdd77b6595122b18da388ecb86f4e65f8768ea6c8f98295b22ae9a0c57d9d22170f3cf1e8bb9a6fe5cdfcc10ef8f7f06dbef0fc284b4eba23d95_1280.jpg",
+    image: "https://images.unsplash.com/photo-1618435775084-4a1fbded9e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Ticks pose serious health risks in Maine as carriers of Lyme disease and other illnesses. Our tick control program targets both adults and nymphs in your yard to significantly reduce exposure risks for your family and pets.",
     problems: [
       "Transmission of Lyme disease and other serious illnesses",
