@@ -98,11 +98,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-nps-amber text-nps-forest rounded-full font-semibold px-5 py-2 hover:bg-nps-amber/90 transition;
+    @apply bg-nps-amber text-nps-forest rounded font-medium px-5 py-2 hover:bg-nps-amber/90 transition;
   }
   
   .btn-outline {
-    @apply border border-nps-amber text-nps-amber rounded-full font-semibold px-5 py-2 hover:bg-nps-amber/10 transition;
+    @apply border border-nps-amber text-nps-amber rounded font-medium px-5 py-2 hover:bg-nps-amber/10 transition;
   }
 }
 

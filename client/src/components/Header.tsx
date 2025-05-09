@@ -19,95 +19,119 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[var(--nps-forest)] shadow-md h-16">
-      <div className="container mx-auto px-4 h-full flex items-center justify-between">
-        {/* Logo and Brand */}
-        <Link href="/" className="flex items-center">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/logo.svg"
-              alt="Northern Pest Solutions logo"
-              className="h-8 w-auto md:h-12 object-contain"
-            />
-            <span className="text-lg md:text-xl font-semibold text-[var(--nps-ivory)] hidden sm:inline tracking-tight">
-              Northern Pest Solutions
-            </span>
+    <header className="fixed inset-x-0 top-0 z-50 w-full bg-[var(--nps-forest)]">
+      {/* Main navigation bar */}
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo and company name */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <div className="flex-shrink-0">
+                <img 
+                  src="/images/northern-pest-logo.png"
+                  alt="Northern Pest Solutions logo"
+                  className="h-10 w-auto"
+                />
+              </div>
+              <div className="ml-3 text-white">
+                <span className="font-semibold text-lg block leading-tight">Northern</span>
+                <span className="font-semibold text-lg block leading-tight">Pest Solutions</span>
+              </div>
+            </Link>
           </div>
-        </Link>
-        
-        {/* Mobile menu button */}
-        <button 
-          className="block md:hidden text-[var(--nps-ivory)] hover:text-[var(--nps-amber)] focus:outline-none transition-colors" 
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center">
-          <ul className="flex items-center space-x-8">
-            {NAVIGATION.map((item) => {
-              const active = isActive(item.href);
-              return (
-                <li key={item.name} className="relative">
-                  <Link href={item.href}>
-                    <span 
-                      className={`text-[var(--nps-ivory)] ${active ? 'text-[var(--nps-amber)]' : 'hover:text-[var(--nps-amber)]'} transition-colors duration-200 py-1 font-medium cursor-pointer text-base`}
-                    >
-                      {item.name}
-                    </span>
+          
+          {/* Desktop navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-center space-x-8">
+              {NAVIGATION.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link 
+                    key={item.name}
+                    href={item.href}
+                    className={`px-1 py-2 text-base font-medium relative ${
+                      active 
+                        ? 'text-[var(--nps-amber)]' 
+                        : 'text-white hover:text-[var(--nps-amber)]'
+                    } transition-colors duration-200`}
+                  >
+                    {item.name}
+                    {active && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[var(--nps-amber)]"></span>
+                    )}
                   </Link>
-                  {active && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-[var(--nps-amber)] rounded-full"></span>
-                  )}
-                </li>
-              );
-            })}
-            <li>
-              <Button className="btn-primary ml-4">
-                Get Quote
-              </Button>
-            </li>
-          </ul>
-        </nav>
+                );
+              })}
+              
+              <Link href="#contact">
+                <Button 
+                  className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-5 py-2 rounded"
+                >
+                  Get Quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="flex md:hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[var(--nps-amber)] focus:outline-none"
+              aria-controls="mobile-menu"
+              aria-expanded={mobileMenuOpen}
+              onClick={toggleMobileMenu}
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+        </div>
       </div>
       
-      {/* Mobile Navigation */}
-      <div 
-        className={`md:hidden ${mobileMenuOpen ? 'max-h-[400px] opacity-100 border-b border-[var(--nps-sage)]/20' : 'max-h-0 opacity-0 border-none'} overflow-hidden transition-all duration-300 absolute w-full bg-[var(--nps-forest)]`}
+      {/* Mobile menu, show/hide based on menu state */}
+      <div
+        className={`md:hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}
+        id="mobile-menu"
       >
-        <nav className="container mx-auto px-4 py-5">
-          <ul className="flex flex-col space-y-4">
-            {NAVIGATION.map((item) => {
-              const active = isActive(item.href);
-              return (
-                <li key={item.name} className="relative border-l-2 pl-3" style={{ 
-                  borderColor: active ? 'var(--nps-amber)' : 'transparent' 
-                }}>
-                  <Link href={item.href}>
-                    <span 
-                      className={`${active ? 'text-[var(--nps-amber)]' : 'text-[var(--nps-ivory)] hover:text-[var(--nps-amber)]'} transition-colors py-1 font-medium text-base block`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-            <li className="pt-2">
-              <Button className="btn-primary w-full">
+        <div className="space-y-1 px-2 pb-3 pt-2 border-t border-white/10">
+          {NAVIGATION.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`block px-3 py-2 text-base font-medium ${
+                  active 
+                    ? 'text-[var(--nps-amber)]' 
+                    : 'text-white hover:text-[var(--nps-amber)]'
+                } transition-colors duration-200`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+          <div className="mt-4 px-3">
+            <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <Button 
+                className="w-full bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-4 py-2 rounded"
+              >
                 Get Quote
               </Button>
-            </li>
-          </ul>
-        </nav>
+            </Link>
+          </div>
+        </div>
       </div>
+      
+      {/* Bottom accent border */}
+      <div className="h-1 w-full bg-[var(--nps-amber)]"></div>
     </header>
   );
 }
