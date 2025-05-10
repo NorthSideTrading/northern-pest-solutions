@@ -3,7 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
-import newLogo from '../assets/images/northern-logo-new.png';
+import northernLogo from '../assets/images/northern-logo.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -125,7 +125,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                  src={newLogo}
+                  src={northernLogo}
                   alt="Northern Pest Solutions logo"
                   className="h-16 w-auto"
                 />
