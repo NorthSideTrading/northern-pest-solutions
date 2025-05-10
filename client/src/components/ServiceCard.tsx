@@ -10,9 +10,23 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ id, name, description, image }: ServiceCardProps) {
+  // Function to determine if a string is an absolute URL
+  const isAbsoluteUrl = (url: string) => {
+    return url.indexOf('http://') === 0 || url.indexOf('https://') === 0;
+  };
+  
+  // Get the appropriate image path or URL
+  const imageUrl = isAbsoluteUrl(image) ? image : image;
+  
   return (
     <Card className="bg-[var(--nps-ivory)] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-      <img src={image} alt={`${name} control services`} className="w-full h-48 object-cover" />
+      <div className="w-full h-48 overflow-hidden">
+        <img 
+          src={imageUrl} 
+          alt={`${name} control services`} 
+          className="w-full h-full object-cover transition-transform hover:scale-105"
+        />
+      </div>
       <CardContent className="p-6">
         <h3 className="text-xl font-bold text-[var(--nps-forest)] mb-3">{name}</h3>
         <p className="text-gray-700 mb-4">{description}</p>

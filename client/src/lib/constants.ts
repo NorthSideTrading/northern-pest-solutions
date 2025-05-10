@@ -40,7 +40,7 @@ export const SERVICES = [
     id: "bed-bugs",
     name: "Bed Bugs",
     description: "Comprehensive bed bug elimination to restore comfort to your living spaces.",
-    image: "/images/bed-bugs.webp",
+    image: "/bed-bugs.webp",
     longDescription: "Bed bugs are resilient pests that require professional intervention. Our multi-step bed bug treatment process ensures complete elimination of these persistent parasites from your home or lodging establishment.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
