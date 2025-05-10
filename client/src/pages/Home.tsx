@@ -96,13 +96,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Left column with featured services */}
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {SERVICES.slice(0, 4).map((service) => (
+              {/* Manually select important pest services to feature */}
+              {[
+                SERVICES.find(s => s.id === "bed-bugs"),
+                SERVICES.find(s => s.id === "mice-rats"),
+                SERVICES.find(s => s.id === "ants"),
+                SERVICES.find(s => s.id === "stinging-insects")
+              ].filter(Boolean).map((service) => (
                 <ServiceCard
-                  key={service.id}
-                  id={service.id}
-                  name={service.name}
-                  description={service.description}
-                  image={service.image}
+                  key={service!.id}
+                  id={service!.id}
+                  name={service!.name}
+                  description={service!.description}
+                  image={service!.image}
                 />
               ))}
             </div>
@@ -137,14 +143,25 @@ export default function Home() {
             </div>
           </div>
           
-          {/* View all services link */}
-          <div className="text-center mt-10">
-            <Link href="#contact">
-              <Button variant="outline" className="border-[var(--nps-forest)] text-[var(--nps-forest)] hover:bg-[var(--nps-forest)] hover:text-white group">
-                Get a free quote
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+          {/* View all services and get quote links */}
+          <div className="flex justify-center mt-10 gap-4 flex-wrap">
+            <div className="text-center">
+              <Link href="/#services">
+                <Button className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium group">
+                  View All Services
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+            
+            <div className="text-center">
+              <Link href="#contact">
+                <Button variant="outline" className="border-[var(--nps-forest)] text-[var(--nps-forest)] hover:bg-[var(--nps-forest)] hover:text-white group">
+                  Get a free quote
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
