@@ -106,7 +106,7 @@ export default function Home() {
                 <ServiceCard
                   key={service!.id}
                   id={service!.id}
-                  name={service!.name}
+                  name={service!.id === "ants" ? "Ants" : service!.name}
                   description={service!.description}
                   image={service!.image}
                 />
