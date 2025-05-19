@@ -14,11 +14,11 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <div className="flex items-center gap-3">
-                <div className="relative w-16 h-16 flex-shrink-0 bg-white rounded-full border-2 border-[var(--nps-amber)] overflow-hidden shadow-lg">
+                <div className="flex-shrink-0 bg-white rounded-full border-2 border-[var(--nps-amber)] p-2 shadow-lg">
                   <img
                     src="/images/northern-logo.svg"
                     alt="Northern Pest Solutions logo"
-                    className="absolute inset-0 w-full h-full object-contain scale-[0.85]"
+                    className="h-10 w-auto"
                   />
                 </div>
                 <div className="flex flex-col">
