@@ -18,7 +18,7 @@ export const NAVIGATION = [
 export const SERVICES = [
   {
     id: "ants",
-    name: "Ants",
+    name: "Ant",
     description: "Effective ant control solutions to keep your home or business ant-free.",
     image: "/images/ant-control-realistic.png",
     longDescription: "Ants are among the most common household pests in Maine. Our comprehensive ant control service tackles infestations at their source, eliminating colonies and preventing their return with targeted treatments and preventive measures.",
