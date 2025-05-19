@@ -185,7 +185,7 @@ export const SERVICES = [
     id: "stinging-insects",
     name: "Stinging Insects",
     description: "Safe removal of wasps, hornets, and other stinging insect nests.",
-    image: "https://images.unsplash.com/photo-1601880348117-25c1127a95df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "/images/stinging-insects-control-realistic.png",
     longDescription: "Stinging insects like wasps, hornets, and yellow jackets can pose serious health risks, especially for allergic individuals. Our stinging insect control services provide safe, effective removal of nests and colonies from your property.",
     problems: [
       "Painful stings that can cause severe allergic reactions",
