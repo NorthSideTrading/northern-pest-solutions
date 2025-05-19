@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Clock, Mail, Phone } from 'lucide-react';
 import { COMPANY_INFO, NAVIGATION, SERVICES } from '@/lib/constants';
+import northernLogo from '../assets/images/northern-logo.png';
 
 export default function Footer() {
   // Only show the first 5 services in the footer
@@ -16,7 +17,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0 bg-white rounded-full border-2 border-[var(--nps-amber)] p-2 shadow-lg">
                   <img
-                    src="/images/northern-logo.svg"
+                    src={northernLogo}
                     alt="Northern Pest Solutions logo"
                     className="h-10 w-auto"
                   />
