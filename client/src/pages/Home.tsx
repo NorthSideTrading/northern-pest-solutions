@@ -9,6 +9,7 @@ import TestimonialCard from '@/components/TestimonialCard';
 import ContactForm from '@/components/ContactForm';
 import Hero from '@/components/Hero';
 import FAQSection from '@/components/FAQSection';
+import LocalCityLinks from '@/components/LocalCityLinks';
 
 export default function Home() {
   const [location] = useLocation();
@@ -304,6 +305,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Local City Links */}
+      <LocalCityLinks />
+
+      {/* FAQ Section */}
+      <FAQSection />
     </>
   );
 }
