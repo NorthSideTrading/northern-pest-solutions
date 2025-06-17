@@ -15,11 +15,11 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 bg-white rounded-full border-2 border-[var(--nps-amber)] p-2 shadow-lg">
+                <div className="flex-shrink-0">
                   <img
                     src={mainePestProsLogo}
                     alt="Maine Pest Pros logo"
-                    className="h-10 w-auto"
+                    className="h-12 w-auto brightness-0 invert"
                   />
                 </div>
                 <div className="flex flex-col">
