@@ -24,16 +24,17 @@ export default function Hero({ showButtons = true }: HeroProps) {
         <div className="max-w-xl">
           {/* Main headline - carefully stacked text with specific colors */}
           <h1 className="font-bold leading-tight mb-4">
-            <span className="text-5xl md:text-6xl lg:text-7xl text-white block">Professional</span>
+            <span className="text-5xl md:text-6xl lg:text-7xl text-white block">Maine's #1</span>
             <span className="text-5xl md:text-6xl lg:text-7xl text-white block">Pest Control</span>
-            <span className="text-5xl md:text-6xl lg:text-7xl text-[var(--nps-amber)] block">Services</span>
-            <span className="text-4xl md:text-5xl text-white block mt-2">in Central Maine</span>
+            <span className="text-5xl md:text-6xl lg:text-7xl text-[var(--nps-amber)] block">Experts</span>
+            <span className="text-3xl md:text-4xl text-white block mt-2">Licensed • Insured • Guaranteed</span>
           </h1>
           
-          {/* Subheadline - custom text from the image */}
+          {/* Subheadline - SEO optimized with location keywords */}
           <p className="text-lg md:text-xl text-white/90 max-w-md mb-8">
-            Protect your home and business from unwanted pests 
-            with our trusted and effective solutions.
+            Professional ant, rodent, bed bug & wasp extermination 
+            in Portland, Augusta, Bangor & Central Maine. 
+            <strong className="text-[var(--nps-amber)]">Free inspections</strong> available 24/7.
           </p>
           
           {/* Call to action buttons - styled to match the image */}

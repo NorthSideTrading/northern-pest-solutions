@@ -1,10 +1,14 @@
 export const COMPANY_INFO = {
   name: "Northern Pest Solutions",
-  tagline: "a solution you can trust.",
+  tagline: "Maine's Trusted Pest Control Experts",
   phone: "(207) 629-8348",
   email: "info@northernpestsolutions.com",
-  serviceArea: "Serving homes & businesses across Central Maine.",
-  hours: "Open 24 hours."
+  address: "Waterville, Maine 04901",
+  serviceArea: "Serving Central Maine including Portland, Augusta, Bangor, Lewiston & Waterville",
+  hours: "24/7 Emergency Pest Control Services",
+  license: "Licensed & Insured Pest Control Company",
+  googleBusinessUrl: "https://business.google.com/",
+  serviceRadius: "50 miles from Waterville, ME"
 };
 
 export const NAVIGATION = [
@@ -19,9 +23,9 @@ export const SERVICES = [
   {
     id: "ants",
     name: "Ant",
-    description: "Effective ant control solutions to keep your home or business ant-free.",
+    description: "Professional ant extermination services in Maine. Licensed pest control for carpenter ants, pavement ants & sugar ants.",
     image: "/images/ant-control-realistic.png",
-    longDescription: "Ants are among the most common household pests in Maine. Our comprehensive ant control service tackles infestations at their source, eliminating colonies and preventing their return with targeted treatments and preventive measures.",
+    longDescription: "Ants are the most common household pest in Maine homes and businesses. Our licensed ant control experts provide comprehensive extermination services throughout Central Maine, including Portland, Augusta, Bangor, and Waterville. We eliminate carpenter ant colonies that damage wood structures and pavement ants that invade kitchens.",
     problems: [
       "Kitchen and food storage contamination",
       "Structural damage (especially with carpenter ants)",
@@ -39,9 +43,9 @@ export const SERVICES = [
   {
     id: "bed-bugs",
     name: "Bed Bugs",
-    description: "Comprehensive bed bug elimination to restore comfort to your living spaces.",
+    description: "Expert bed bug extermination in Maine. Heat treatment & chemical solutions for hotels, homes & apartments.",
     image: "/images/bed-bug-control-realistic.jpg",
-    longDescription: "Bed bugs are resilient pests that require professional intervention. Our multi-step bed bug treatment process ensures complete elimination of these persistent parasites from your home or lodging establishment.",
+    longDescription: "Bed bugs are a serious problem in Maine hotels, apartments, and homes. Our certified bed bug exterminators use proven heat treatment and targeted chemical applications to eliminate infestations completely. We serve Portland, Augusta, Bangor, and all Central Maine communities with guaranteed bed bug removal.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
       "Sleep disturbances and anxiety",
@@ -184,9 +188,9 @@ export const SERVICES = [
   {
     id: "stinging-insects",
     name: "Stinging Insects",
-    description: "Safe removal of wasps, hornets, and other stinging insect nests.",
+    description: "Expert wasp & hornet removal in Maine. Safe bee relocation & yellow jacket nest elimination.",
     image: "/images/stinging-insects-control-realistic.png",
-    longDescription: "Stinging insects like wasps, hornets, and yellow jackets can pose serious health risks, especially for allergic individuals. Our stinging insect control services provide safe, effective removal of nests and colonies from your property.",
+    longDescription: "Maine summers bring active wasp, hornet, and yellow jacket populations that threaten families and pets. Our licensed pest control technicians safely remove dangerous nests from homes and businesses throughout Central Maine. We provide emergency wasp removal services in Portland, Augusta, Bangor, and surrounding communities with same-day service available.",
     problems: [
       "Painful stings that can cause severe allergic reactions",
       "Aggressive defense of nests, particularly in late summer",
