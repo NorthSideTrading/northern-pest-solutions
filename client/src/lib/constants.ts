@@ -251,15 +251,52 @@ export const TESTIMONIALS = [
 ];
 
 export const SERVICE_AREAS = [
-  "Augusta",
-  "Waterville",
-  "Bangor",
-  "Belfast",
-  "Brunswick",
-  "Skowhegan",
-  "Farmington",
-  "Rockland"
+  "Portland", "Augusta", "Bangor", "Lewiston", "Waterville",
+  "Brunswick", "Biddeford", "Saco", "Westbrook", "Auburn",
+  "Gardiner", "Hallowell", "Winslow", "Oakland", "Fairfield"
 ];
+
+export const LOCAL_PAGES = [
+  {
+    city: "Portland",
+    slug: "portland-pest-control",
+    title: "Pest Control Portland Maine | Exterminator Services",
+    description: "Professional pest control in Portland, ME. Licensed exterminators for ants, rodents, bed bugs. Emergency service available. Call (207) 629-8348",
+    population: "68,408",
+    keyPests: ["Ants", "Mice & Rats", "Bed Bugs", "Wasps"],
+    zipCodes: ["04101", "04102", "04103", "04104", "04105"]
+  },
+  {
+    city: "Augusta",
+    slug: "augusta-pest-control", 
+    title: "Pest Control Augusta Maine | Professional Exterminators",
+    description: "Expert pest control services in Augusta, ME. State capital pest management for government buildings, homes & businesses. Licensed & insured.",
+    population: "18,899",
+    keyPests: ["Carpenter Ants", "Rodents", "Stinging Insects", "Ticks"],
+    zipCodes: ["04330", "04332", "04333", "04336"]
+  },
+  {
+    city: "Bangor",
+    slug: "bangor-pest-control",
+    title: "Pest Control Bangor Maine | Queen City Exterminators", 
+    description: "Professional pest control in Bangor, ME. Comprehensive extermination for Northern Maine homes & businesses. Same-day service available.",
+    population: "31,753",
+    keyPests: ["Mice & Rats", "Spiders", "Mosquitoes", "Wasps"],
+    zipCodes: ["04401", "04402"]
+  }
+];
+
+export const SEO_KEYWORDS = {
+  primary: ["pest control Maine", "exterminator Maine", "pest control services Maine"],
+  services: [
+    "ant control Maine", "rodent control Maine", "bed bug treatment Maine",
+    "wasp removal Maine", "mosquito control Maine", "spider control Maine"
+  ],
+  local: [
+    "pest control Portland ME", "pest control Augusta ME", "pest control Bangor ME",
+    "exterminator Portland Maine", "exterminator Augusta Maine", "exterminator Bangor Maine"
+  ]
+};
 
 export const FEATURES = [
   {
