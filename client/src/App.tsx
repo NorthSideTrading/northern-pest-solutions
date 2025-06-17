@@ -19,6 +19,11 @@ import Spiders from "@/pages/services/spiders";
 import StingingInsects from "@/pages/services/stinging-insects";
 import Ticks from "@/pages/services/ticks";
 
+// Local City Pages
+import Portland from "@/pages/cities/portland";
+import Augusta from "@/pages/cities/augusta";
+import Bangor from "@/pages/cities/bangor";
+
 function Router() {
   return (
     <Switch>
@@ -33,6 +38,9 @@ function Router() {
       <Route path="/services/spiders" component={Spiders} />
       <Route path="/services/stinging-insects" component={StingingInsects} />
       <Route path="/services/ticks" component={Ticks} />
+      <Route path="/portland-pest-control" component={Portland} />
+      <Route path="/augusta-pest-control" component={Augusta} />
+      <Route path="/bangor-pest-control" component={Bangor} />
       <Route component={NotFound} />
     </Switch>
   );

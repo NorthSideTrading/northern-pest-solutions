@@ -8,6 +8,7 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import ContactForm from '@/components/ContactForm';
 import Hero from '@/components/Hero';
+import FAQSection from '@/components/FAQSection';
 
 export default function Home() {
   const [location] = useLocation();
@@ -172,9 +173,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Service Areas */}
             <div>
-              <h2 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Our Service Area</h2>
+              <h2 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Maine Pest Control Service Areas</h2>
               <p className="mb-6">
-                We provide comprehensive pest control services throughout Central Maine, including:
+                Our licensed pest control technicians serve homes and businesses throughout Central Maine, 
+                providing expert extermination services in:
               </p>
               
               <div className="flex flex-wrap gap-3 mb-6">
