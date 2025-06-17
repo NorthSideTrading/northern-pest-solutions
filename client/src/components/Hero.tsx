@@ -37,33 +37,9 @@ export default function Hero({ showButtons = true }: HeroProps) {
             <strong className="text-[var(--nps-amber)]">Free inspections</strong> available 24/7.
           </p>
           
-          {/* Call to action buttons - styled to match the image */}
+          {/* Call to action button - single green button */}
           {showButtons && (
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#services"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Update the URL hash
-                  window.history.pushState(null, '', '#services');
-                  
-                  const servicesSection = document.getElementById('services');
-                  if (servicesSection) {
-                    const headerHeight = 96;
-                    const elementPosition = servicesSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
-                    
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
-              >
-                <Button size="lg" className="bg-[var(--nps-forest)] hover:bg-[var(--nps-forest)]/90 text-white font-medium py-2.5 px-6 rounded-md">
-                  Explore Our Services
-                </Button>
-              </a>
+            <div className="flex">
               <a 
                 href="#contact"
                 onClick={(e) => {
@@ -83,8 +59,9 @@ export default function Hero({ showButtons = true }: HeroProps) {
                     });
                   }
                 }}
+                className="w-full"
               >
-                <Button size="lg" variant="outline" className="bg-white text-[var(--nps-amber)] border-white hover:bg-white/90 font-medium py-2.5 px-6 rounded-md">
+                <Button size="lg" className="bg-[var(--nps-forest)] hover:bg-[var(--nps-forest)]/90 text-white font-bold py-4 px-12 rounded-lg text-lg w-full">
                   Get a Free Quote
                 </Button>
               </a>
