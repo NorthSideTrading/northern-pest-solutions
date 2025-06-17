@@ -1,7 +1,7 @@
 export const COMPANY_INFO = {
   name: "Maine Pest Pros",
   tagline: "Maine's Trusted Pest Control Experts",
-  phone: "(207) 629-8348",
+  phone: "(207) 215-0860",
   email: "info@mainepestpros.com",
   address: "Waterville, Maine 04901",
   serviceArea: "Serving Central Maine including Portland, Augusta, Bangor, Lewiston & Waterville",
@@ -261,7 +261,7 @@ export const LOCAL_PAGES = [
     city: "Portland",
     slug: "portland-pest-control",
     title: "Pest Control Portland Maine | Exterminator Services",
-    description: "Professional pest control in Portland, ME. Licensed exterminators for ants, rodents, bed bugs. Emergency service available. Call (207) 629-8348",
+    description: "Professional pest control in Portland, ME. Licensed exterminators for ants, rodents, bed bugs. Emergency service available. Call (207) 215-0860",
     population: "68,408",
     keyPests: ["Ants", "Mice & Rats", "Bed Bugs", "Wasps"],
     zipCodes: ["04101", "04102", "04103", "04104", "04105"]
