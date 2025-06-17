@@ -1,8 +1,8 @@
 export const COMPANY_INFO = {
-  name: "Northern Pest Solutions",
+  name: "Maine Pest Pros",
   tagline: "Maine's Trusted Pest Control Experts",
   phone: "(207) 629-8348",
-  email: "info@northernpestsolutions.com",
+  email: "info@mainepestpros.com",
   address: "Waterville, Maine 04901",
   serviceArea: "Serving Central Maine including Portland, Augusta, Bangor, Lewiston & Waterville",
   hours: "24/7 Emergency Pest Control Services",

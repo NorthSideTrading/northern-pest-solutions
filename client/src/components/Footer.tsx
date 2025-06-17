@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Clock, Mail, Phone } from 'lucide-react';
 import { COMPANY_INFO, NAVIGATION, SERVICES } from '@/lib/constants';
-import northernLogo from '../assets/images/northern-logo.png';
+import mainePestProsLogo from '/images/maine-pest-pros-logo.png';
 
 export default function Footer() {
   // Only show the first 5 services in the footer
@@ -17,15 +17,15 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0 bg-white rounded-full border-2 border-[var(--nps-amber)] p-2 shadow-lg">
                   <img
-                    src={northernLogo}
-                    alt="Northern Pest Solutions logo"
+                    src={mainePestProsLogo}
+                    alt="Maine Pest Pros logo"
                     className="h-10 w-auto"
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg text-white leading-tight">NORTHERN</span>
-                  <span className="font-bold text-lg text-white leading-tight">PEST SOLUTIONS</span>
-                  <span className="text-xs italic text-[var(--nps-amber)]">A solution you can trust</span>
+                  <span className="font-bold text-lg text-white leading-tight">MAINE</span>
+                  <span className="font-bold text-lg text-white leading-tight">PEST PROS</span>
+                  <span className="text-xs italic text-[var(--nps-amber)]">Maine's Trusted Pest Control Experts</span>
                 </div>
               </div>
             </div>
