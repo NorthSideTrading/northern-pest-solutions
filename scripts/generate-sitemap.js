@@ -7,31 +7,31 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const hostname = 'https://www.mainepestpros.com';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Define all pages with their priorities and change frequencies
+// Define all pages with their priorities and change frequencies - using actual route paths
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
   { url: '/services/ant-control', priority: '0.8', changefreq: 'monthly' },
   { url: '/services/rodent-control', priority: '0.8', changefreq: 'monthly' },
   { url: '/services/bed-bug-exterminator', priority: '0.8', changefreq: 'monthly' },
-  { url: '/cities/augusta', priority: '0.7', changefreq: 'monthly' },
-  { url: '/cities/bangor', priority: '0.7', changefreq: 'monthly' },
-  { url: '/cities/portland', priority: '0.7', changefreq: 'monthly' },
-  { url: '/cities/lewiston', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/auburn', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/waterville', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/gardiner', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/belfast', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/brewer', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/skowhegan', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/pittsfield', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/fairfield', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/winslow', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/oakland', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/belgrade', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/benton', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/china', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/liberty', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cities/orono', priority: '0.6', changefreq: 'monthly' }
+  { url: '/portland-pest-control', priority: '0.7', changefreq: 'monthly' },
+  { url: '/pest-control-augusta-me', priority: '0.7', changefreq: 'monthly' },
+  { url: '/pest-control-bangor-me', priority: '0.7', changefreq: 'monthly' },
+  { url: '/pest-control-lewiston-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-auburn-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-waterville-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-gardiner-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-belfast-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-brewer-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-skowhegan-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-pittsfield-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-fairfield-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-winslow-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-oakland-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-belgrade-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-benton-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-china-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-liberty-me', priority: '0.6', changefreq: 'monthly' },
+  { url: '/pest-control-orono-me', priority: '0.6', changefreq: 'monthly' }
 ];
 
 // Generate XML sitemap
