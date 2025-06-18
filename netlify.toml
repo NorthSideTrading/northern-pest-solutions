@@ -40,3 +40,6 @@
 
 [[plugins]]
   package = "netlify-plugin-minify-html"
+
+[images]
+  remote_images = []

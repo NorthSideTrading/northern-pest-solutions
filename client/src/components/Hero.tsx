@@ -18,7 +18,7 @@ export default function Hero({ showButtons = true }: HeroProps) {
       }}
     >
       <img 
-        src="/images/hero-pests.png" 
+        src="/images/maine-pest-pros-hero.avif" 
         alt="Professional pest control technician treating Maine home"
         className="absolute inset-0 w-full h-full object-cover"
         width="1600"
