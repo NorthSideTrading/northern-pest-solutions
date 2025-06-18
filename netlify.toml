@@ -5,6 +5,19 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Force HTTPS redirects
+[[redirects]]
+  from = "http://mainepestpros.com/*"
+  to = "https://mainepestpros.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.mainepestpros.com/*"
+  to = "https://www.mainepestpros.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
