@@ -6,6 +6,30 @@
     <title>Pest Control Maine | Expert Exterminator Services | Maine Pest Pros</title>
     <meta name="description" content="Professional pest control services in Maine. Licensed exterminators for ants, rodents, bed bugs, wasps & more. Free inspections in Portland, Augusta, Bangor. Call (207) 215-0860">
     <meta name="keywords" content="pest control Maine, exterminator Maine, ant control Maine, rodent control Maine, bed bug treatment Maine, wasp removal Maine, pest control Portland ME, pest control Augusta ME, pest control Bangor ME">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/maine-pest-pros-hero.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Critical CSS inline -->
+    <style>
+      :root {
+        --nps-forest: #1B3C2F;
+        --nps-sage: #8BAE89;
+        --nps-ivory: #F5F7F4;
+        --nps-amber: #F6D04D;
+      }
+      body { margin: 0; font-family: Inter, system-ui, sans-serif; line-height: 1.6; }
+      .hero { background: var(--nps-forest); color: white; padding: 6rem 1rem 4rem; min-height: 60vh; }
+      .container { max-width: 1200px; margin: 0 auto; }
+      .btn-primary { background: var(--nps-amber); color: var(--nps-forest); padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block; }
+    </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
     <meta property="og:title" content="Pest Control Maine | Expert Exterminator Services | Maine Pest Pros">
     <meta property="og:description" content="Licensed pest control experts in Maine. Professional extermination for ants, rodents, bed bugs, wasps & more. Free inspections across Central Maine.">
     <meta property="og:type" content="website">
