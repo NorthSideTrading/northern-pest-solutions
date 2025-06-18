@@ -172,30 +172,6 @@ export default function Home() {
       <section id="about" className="py-16 bg-[var(--nps-ivory)]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Service Areas */}
-            <div>
-              <h2 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Maine Pest Control Service Areas</h2>
-              <p className="mb-6">
-                Our licensed pest control technicians serve homes and businesses throughout Central Maine, 
-                providing expert extermination services in:
-              </p>
-              
-              <div className="flex flex-wrap gap-3 mb-6">
-                {SERVICE_AREAS.map((area, index) => (
-                  <div key={index} className="bg-white border border-[var(--nps-sage)] px-4 py-2 rounded-full text-sm">
-                    {area}
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-8 flex justify-start">
-                <a href="#contact" className="inline-flex items-center text-[var(--nps-forest)] font-medium hover:text-[var(--nps-amber)] transition-colors">
-                  Not sure if we service your area? Contact us
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </div>
-            </div>
-            
             {/* Why Choose Us */}
             <div>
               <h2 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Why Choose Northern Pest Solutions</h2>
@@ -231,6 +207,30 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Service Areas */}
+            <div>
+              <h2 className="text-2xl font-bold text-[var(--nps-forest)] mb-6">Maine Pest Control Service Areas</h2>
+              <p className="mb-6">
+                Our licensed pest control technicians serve homes and businesses throughout Central Maine, 
+                providing expert extermination services in:
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-6">
+                {SERVICE_AREAS.map((area, index) => (
+                  <div key={index} className="bg-white border border-[var(--nps-sage)] px-4 py-2 rounded-full text-sm">
+                    {area}
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8 flex justify-start">
+                <a href="#contact" className="inline-flex items-center text-[var(--nps-forest)] font-medium hover:text-[var(--nps-amber)] transition-colors">
+                  Not sure if we service your area? Contact us
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
