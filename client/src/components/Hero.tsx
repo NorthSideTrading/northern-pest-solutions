@@ -17,14 +17,15 @@ export default function Hero({ showButtons = true }: HeroProps) {
         minHeight: '70vh'
       }}
     >
-      <img 
-        src="/images/maine-pest-pros-hero.webp" 
-        alt="Professional pest control technician treating Maine home for ants, rodents, and other pests" 
-        className="absolute inset-0 w-full h-full object-cover"
-        decoding="sync"
-        width="1920"
-        height="1080"
-      />
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url("/images/hero-pests.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
       {/* Content container aligned to the left */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-xl">

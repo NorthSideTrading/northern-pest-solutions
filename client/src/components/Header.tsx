@@ -184,30 +184,10 @@ export default function Header() {
               })}
               
               <a 
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Update the URL hash
-                  window.history.pushState(null, '', '#contact');
-                  
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    const headerHeight = 96;
-                    const elementPosition = contactSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
-                    
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
+                href="tel:+12072150860"
+                className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-5 py-2 rounded transition-colors duration-200 inline-flex items-center"
               >
-                <Button 
-                  className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-5 py-2 rounded"
-                >
-                  Get Quote
-                </Button>
+                (207) 215-0860
               </a>
             </div>
           </div>
@@ -284,34 +264,11 @@ export default function Header() {
           })}
           <div className="mt-4 px-3">
             <a 
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                setMobileMenuOpen(false);
-                
-                // Update the URL hash
-                window.history.pushState(null, '', '#contact');
-                
-                setTimeout(() => {
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    const headerHeight = 96;
-                    const elementPosition = contactSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.scrollY - headerHeight;
-                    
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }, 100);
-              }}
+              href="tel:+12072150860"
+              className="w-full bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-4 py-2 rounded transition-colors duration-200 inline-flex items-center justify-center"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              <Button 
-                className="w-full bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-4 py-2 rounded"
-              >
-                Get Quote
-              </Button>
+              (207) 215-0860
             </a>
           </div>
         </div>
