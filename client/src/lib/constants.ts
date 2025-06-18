@@ -15,7 +15,6 @@ export const NAVIGATION = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#services" },
   { name: "Service Areas", href: "/#about" },
-  { name: "Reviews", href: "/#testimonials" },
   { name: "Contact", href: "/#contact" }
 ];
 
