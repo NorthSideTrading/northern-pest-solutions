@@ -21,9 +21,9 @@ export default function Hero({ showButtons = true }: HeroProps) {
         src="/images/hero-pests.png" 
         alt="Professional pest control technician treating Maine home"
         className="absolute inset-0 w-full h-full object-cover"
-        width="1920"
-        height="1080"
-        decoding="sync"
+        width="1600"
+        height="960"
+        decoding="async"
       />
       {/* Content container aligned to the left */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">

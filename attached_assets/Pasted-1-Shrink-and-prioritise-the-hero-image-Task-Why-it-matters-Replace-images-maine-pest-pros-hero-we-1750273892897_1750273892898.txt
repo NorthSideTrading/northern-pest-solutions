@@ -1,0 +1,119 @@
+1 — Shrink and prioritise the hero image
+Task	Why it matters
+Replace /images/maine-pest-pros-hero.webp with a 1 600 px AVIF/WebP ≤ 80 KB	LCP is dominated by hero size – Web.dev shows 25-40 % gains from next-gen formats. 
+web.dev
+developer.mozilla.org
+Preload correctly	Use proper attributes so the browser doesn’t demote the request. 
+gtmetrix.com
+github.com
+
+html
+Copy
+Edit
+<link rel="preload" as="image"
+      href="/images/maine-pest-pros-hero.avif"
+      imagesrcset="/images/maine-pest-pros-hero.avif 1600w">
+<img src="/images/maine-pest-pros-hero.avif"
+     width="1600" height="960"
+     fetchpriority="high" decoding="async">
+The fetchpriority="high" hint is now the recommended way to guarantee download precedence. 
+web.dev
+
+2 — Inline critical CSS (plugin currently failing)
+netlify-plugin-inline-critical-css often breaks on React/Vite apps because Penthouse times-out.
+answers.netlify.com
+github.com
+
+Switch to Critters (local, faster) and let Netlify just minify the HTML:
+
+bash
+Copy
+Edit
+npm i -D critters
+npx critters dist --minify
+Add only the HTML minifier in netlify.toml:
+
+toml
+Copy
+Edit
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+Inlining shaves 250 KB of unused CSS from the render path, pushing FCP to ≈1.3 s. 
+developer.mozilla.org
+
+3 — Real code-splitting (Vite bundle is still whole)
+Manual chunks never loaded because Rollup’s config key is plural manualChunks – a typo leaves the bundle intact.
+dev.to
+
+js
+Copy
+Edit
+// vite.config.js
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react','react-dom'],
+          vendor: ['@heroicons/react','swiper']   // example
+        }
+      }
+    }
+  }
+});
+Combine this with dynamic imports inside routes:
+
+js
+Copy
+Edit
+const Services = lazy(() => import('./pages/Services.jsx'));
+A typical React/Vite site drops to < 80 KB first-load JS after splitting. 
+shaxadd.medium.com
+
+4 — Hard caching + HSTS
+Long-cache immutable assets and lock in HTTPS:
+
+txt
+Copy
+Edit
+# _headers
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+This unlocks HTTP/2 and eliminates the per-profile badge once browser caches refresh. 
+groups.google.com
+debugbear.com
+
+5 — Single deploy script (drop into Replit)
+text
+Copy
+Edit
+1. npx lhci autorun > lighthouse/before.json
+
+2. optimise hero → AVIF, correct preload, remove lazy attr
+3. npx critters dist --minify  # inline CSS
+4. update vite.config.js manualChunks + add dynamic imports
+5. add _headers + HSTS, keep minify-html plugin only
+6. git add -A && git commit -m "perf: hero, critters, split" && git push
+7. Netlify build then npx lhci autorun > lighthouse/after.json
+   Abort if Performance < 90 (exit 1)
+6 — Why plumbing hit 99 but pest didn’t
+Plumbing hero was already small (< 100 KB).
+
+Its CSS file is half the size and Critters succeeded on first run.
+
+The JS stack is plain HTML + Alpine.js (~23 KB, no heavy React).
+
+Hence, nothing big remained to tank LCP or TBT.
+
+Expectation after these fixes
+LCP ≈ 1.8 s (previous 16 s) – smaller hero + correct preload. 
+smashingmagazine.com
+
+FCP ≈ 1.3 s – critical CSS inline.
+
+TBT < 50 ms – bundle split.
+
+Performance 92-94 mobile / 98+ desktop, Best Practices 100, SEO 90+.

@@ -12,7 +12,15 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html')
+      input: path.resolve(__dirname, 'index.html'),
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          vendor: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', 'lucide-react'],
+          router: ['wouter'],
+          query: ['@tanstack/react-query']
+        }
+      }
     }
   }
 });
