@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { Clock, Mail, Phone } from 'lucide-react';
-import { COMPANY_INFO, NAVIGATION, SERVICES } from '@/lib/constants';
+import { COMPANY_INFO, NAVIGATION, SERVICES, LOCAL_PAGES } from '@/lib/constants';
 import mainePestProsLogo from '/images/maine-pest-pros-logo.png';
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--nps-forest)] text-[var(--nps-ivory)] py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <div className="mb-6">
@@ -71,6 +71,27 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h4 className="text-lg font-bold mb-4 text-[var(--nps-amber)]">Service Areas</h4>
+            <ul className="space-y-1 text-xs">
+              {LOCAL_PAGES.slice(0, 10).map((page) => (
+                <li key={page.slug}>
+                  <Link href={`/${page.slug}`}>
+                    <span className="hover:text-[var(--nps-amber)] transition-colors cursor-pointer">
+                      {page.city} Pest Control
+                    </span>
+                  </Link>
+                </li>
+              ))}
+              {LOCAL_PAGES.length > 10 && (
+                <li className="text-gray-400 text-xs">
+                  + {LOCAL_PAGES.length - 10} more cities
+                </li>
+              )}
             </ul>
           </div>
           
