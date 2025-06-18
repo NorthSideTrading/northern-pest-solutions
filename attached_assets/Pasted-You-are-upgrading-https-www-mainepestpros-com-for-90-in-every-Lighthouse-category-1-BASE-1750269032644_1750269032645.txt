@@ -1,0 +1,52 @@
+You are upgrading https://www.mainepestpros.com/ for ≥90 in every Lighthouse category.
+
+1. 🔍 BASELINE
+   • Run `npx lhci autorun` on / ; save JSON to /lighthouse/before/.
+
+2. ⚡ HERO/LCP FIX
+   • Replace /images/maine-pest-pros-hero.webp (≈1 MB) with a 1600 px AVIF (~70 KB).
+   • In <head> add:
+     <link rel="preload" as="image"
+           href="/images/maine-pest-pros-hero.avif" imagesrcset="/images/… 1600w">
+   • Remove `loading="lazy"` from this <img>; keep it for below-fold assets. :contentReference[oaicite:5]{index=5}
+
+3. 🖼 NEXT-GEN IMAGE PIPELINE
+   • Configure Netlify Image CDN (`/.netlify/images?url=`) + AVIF/WebP fallback. :contentReference[oaicite:6]{index=6}
+   • Update all `<img>` src to the CDN URLs with `w=` & `q=` params.
+
+4. 🪄 CRITICAL CSS + MINIFY
+   • Add **@netlify/plugin-inline-critical-css** and **netlify-plugin-minify-html** in `netlify.toml`:
+       [[plugins]] package = "netlify-plugin-inline-critical-css"
+       [[plugins]] package = "netlify-plugin-minify-html" :contentReference[oaicite:7]{index=7}
+   • Run `npx critters` over /dist to inline above-the-fold styles. :contentReference[oaicite:8]{index=8}
+
+5. 🎯 CODE-SPLIT & TREE-SHAKE
+   • Convert every route-level component to dynamic `import()` to enable Vite’s auto-chunking. :contentReference[oaicite:9]{index=9}
+   • Add `build.rollupOptions.output.manualChunks` in `vite.config.js` for vendor splitting.
+   • Run `vite build --report` to verify main bundle < 100 KB. :contentReference[oaicite:10]{index=10}
+
+6. 🔤 FONT SPEED
+   • Self-host Font Awesome & primary webfont.
+   • Add `font-display:swap` and `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` :contentReference[oaicite:11]{index=11}
+
+7. 🛡️ CSP / BEST PRACTICE CLEANUP
+   • Delete `<script src="https://replit.com/public/js/replit-dev-banner.js">` (blocked by CSP). :contentReference[oaicite:12]{index=12}
+   • Scan for `eval`, `document.write`, remove.
+
+8. 🗄️ HEADERS & CACHE
+   • Create `_headers`:
+     /assets/*
+       Cache-Control: public, max-age=31536000, immutable :contentReference[oaicite:13]{index=13}
+     /*
+       Strict-Transport-Security: max-age=63072000; includeSubDomains; preload :contentReference[oaicite:14]{index=14}
+
+9. 🔁 REDIRECT SAFETY NET
+   • Ensure `_redirects` rule exists:
+     /*  https://www.mainepestpros.com/:s 301! :contentReference[oaicite:15]{index=15}
+
+10. 🧪 POST-BUILD GATE
+    • Re-run `lhci autorun`; if Performance OR Best-Practices < 90, abort (`exit 1`).
+    • Save JSON to /lighthouse/after/ and print diff.
+
+11. 📄 OUTPUT
+    • Commit `PERFORMANCE_README.md` summarizing new bundle sizes, LCP, TBT, CLS, and before/after scores.
