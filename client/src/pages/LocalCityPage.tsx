@@ -192,6 +192,52 @@ export default function LocalCityPage({
         </div>
       </section>
 
+      {/* Internal Linking Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[var(--nps-forest)] mb-8 text-center">
+            Pest Control Services Throughout Maine
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+            {LOCAL_PAGES.filter(page => page.city !== city).slice(0, 8).map((page: any) => (
+              <Link key={page.slug} href={`/${page.slug}`}>
+                <span className="block p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow cursor-pointer text-center">
+                  <span className="text-sm font-medium text-[var(--nps-forest)]">{page.city}</span>
+                  <span className="block text-xs text-gray-600">Pest Control</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+          
+          <h3 className="text-2xl font-bold text-[var(--nps-forest)] mb-6 text-center">
+            Specialized {city} Pest Control Services
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/services/ant-control">
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow cursor-pointer">
+                <h4 className="font-bold text-[var(--nps-forest)] mb-2">Same Day Ant Control {city}</h4>
+                <p className="text-sm text-gray-600">Emergency ant extermination with pet safe treatments available 24/7.</p>
+              </div>
+            </Link>
+            <Link href="/services/rodent-control">
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow cursor-pointer">
+                <h4 className="font-bold text-[var(--nps-forest)] mb-2">Affordable Rodent Control {city}</h4>
+                <p className="text-sm text-gray-600">Professional mice and rat removal with organic treatment options.</p>
+              </div>
+            </Link>
+            <Link href="/services/bed-bug-exterminator">
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow cursor-pointer">
+                <h4 className="font-bold text-[var(--nps-forest)] mb-2">24 Hour Bed Bug Exterminator {city}</h4>
+                <p className="text-sm text-gray-600">Commercial and residential bed bug elimination with guaranteed results.</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
+
       {/* Contact Form */}
       <section id="contact-form" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -203,6 +249,9 @@ export default function LocalCityPage({
           </div>
         </div>
       </section>
+
+      {/* Structured Data */}
+      <LocalBusinessSchema city={city} />
     </>
   );
 }
