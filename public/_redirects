@@ -1,7 +1,7 @@
-# Force HTTPS and redirect www to non-www
-http://mainepestpros.com/* https://mainepestpros.com/:splat 301!
-http://www.mainepestpros.com/* https://mainepestpros.com/:splat 301!
-https://www.mainepestpros.com/* https://mainepestpros.com/:splat 301!
+# Force HTTPS for both versions
+http://mainepestpros.com/* https://www.mainepestpros.com/:splat 301!
+http://www.mainepestpros.com/* https://www.mainepestpros.com/:splat 301!
+https://mainepestpros.com/* https://www.mainepestpros.com/:splat 301!
 
 # SPA fallback for client-side routing
 /*    /index.html   200
