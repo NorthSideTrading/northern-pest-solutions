@@ -14,16 +14,9 @@ try {
   console.log('📦 Building application...');
   execSync('npm run build', { stdio: 'inherit' });
 
-  // Step 2: Run Critters to inline critical CSS
-  console.log('🎨 Inlining critical CSS with Critters...');
-  const distPath = path.join(__dirname, '..', 'dist', 'public');
-  
-  if (fs.existsSync(distPath)) {
-    execSync(`npx critters ${distPath} --minify`, { stdio: 'inherit' });
-    console.log('✅ Critical CSS inlined successfully');
-  } else {
-    console.log('⚠️  Dist directory not found, skipping critical CSS inlining');
-  }
+  // Step 2: Run critical CSS inlining
+  console.log('🎨 Inlining critical CSS...');
+  execSync('node scripts/critical-css.js', { stdio: 'inherit' });
 
   console.log('🎉 Build optimization complete!');
   
