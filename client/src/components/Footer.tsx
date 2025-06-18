@@ -78,7 +78,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4 text-[var(--nps-amber)]">Service Areas</h4>
             <ul className="space-y-1 text-xs">
-              {LOCAL_PAGES.slice(0, 10).map((page) => (
+              {LOCAL_PAGES.slice(0, 10).map((page: any) => (
                 <li key={page.slug}>
                   <Link href={`/${page.slug}`}>
                     <span className="hover:text-[var(--nps-amber)] transition-colors cursor-pointer">

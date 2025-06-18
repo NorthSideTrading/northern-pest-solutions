@@ -19,6 +19,11 @@ import Spiders from "@/pages/services/spiders";
 import StingingInsects from "@/pages/services/stinging-insects";
 import Ticks from "@/pages/services/ticks";
 
+// Enhanced Service Pages for SEO
+import AntControl from "@/pages/services/ant-control";
+import RodentControl from "@/pages/services/rodent-control";
+import BedBugExterminator from "@/pages/services/bed-bug-exterminator";
+
 // Local City Pages
 import Portland from "@/pages/cities/portland";
 import Augusta from "@/pages/cities/augusta";
@@ -54,6 +59,9 @@ function Router() {
       <Route path="/services/spiders" component={Spiders} />
       <Route path="/services/stinging-insects" component={StingingInsects} />
       <Route path="/services/ticks" component={Ticks} />
+      <Route path="/services/ant-control" component={AntControl} />
+      <Route path="/services/rodent-control" component={RodentControl} />
+      <Route path="/services/bed-bug-exterminator" component={BedBugExterminator} />
       <Route path="/portland-pest-control" component={Portland} />
       <Route path="/pest-control-augusta-me" component={Augusta} />
       <Route path="/pest-control-bangor-me" component={Bangor} />

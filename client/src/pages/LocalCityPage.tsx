@@ -1,9 +1,11 @@
 import { Link } from 'wouter';
 import { Phone, MapPin, Clock, Star, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { COMPANY_INFO, SERVICES } from '@/lib/constants';
+import { COMPANY_INFO, SERVICES, LOCAL_PAGES, SEO_KEYWORDS } from '@/lib/constants';
 import ServiceCard from '@/components/ServiceCard';
 import ContactForm from '@/components/ContactForm';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import FAQSection from '@/components/FAQSection';
 
 interface LocalCityPageProps {
   city: string;
