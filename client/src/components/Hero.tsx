@@ -17,15 +17,14 @@ export default function Hero({ showButtons = true }: HeroProps) {
         minHeight: '70vh'
       }}
     >
-      <div 
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'url("/images/hero-pests.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      ></div>
+      <img 
+        src="/images/hero-pests.png" 
+        alt="Professional pest control technician treating Maine home"
+        className="absolute inset-0 w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        decoding="sync"
+      />
       {/* Content container aligned to the left */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-xl">
