@@ -3,7 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
-const mainePestProsLogo = '/.netlify/images?url=/images/maine-pest-pros-logo.png&w=256&h=64&q=80';
+const mainePestProsLogo = '/images/maine-pest-pros-logo.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -26,7 +26,7 @@ export default function ServiceCard({ id, name, description, image }: ServiceCar
       <div className="w-full h-48 overflow-hidden bg-gray-100">
         {isIntersecting ? (
           <img 
-            src={`/.netlify/images?url=${imageUrl}&w=400&h=300&q=80`}
+            src={imageUrl}
             alt={`${name} control services in Maine - Professional pest extermination`} 
             className="w-full h-full object-cover transition-transform hover:scale-105"
             loading="lazy"

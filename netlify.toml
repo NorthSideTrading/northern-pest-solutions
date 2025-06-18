@@ -42,4 +42,4 @@
   package = "netlify-plugin-minify-html"
 
 [images]
-  remote_images = []
+  allowlist = ["/images/*"]

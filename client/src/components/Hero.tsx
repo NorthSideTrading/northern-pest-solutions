@@ -23,7 +23,6 @@ export default function Hero({ showButtons = true }: HeroProps) {
         className="absolute inset-0 w-full h-full object-cover"
         width="1600"
         height="960"
-        fetchPriority="high"
         decoding="async"
       />
       {/* Content container aligned to the left */}
