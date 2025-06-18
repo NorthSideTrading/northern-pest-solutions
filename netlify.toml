@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm run build && node scripts/generate-sitemap.js && cp public/sitemap.xml dist/ && cp public/robots.txt dist/ && cp public/_redirects dist/"
+  command = "cd client && vite build && cd .. && node scripts/generate-sitemap.js && cp public/sitemap.xml dist/ && cp public/robots.txt dist/ && cp public/_redirects dist/"
 
 [build.environment]
   NODE_VERSION = "18"
