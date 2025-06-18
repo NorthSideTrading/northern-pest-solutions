@@ -268,33 +268,182 @@ export const LOCAL_PAGES = [
   },
   {
     city: "Augusta",
-    slug: "augusta-pest-control", 
-    title: "Pest Control Augusta Maine | Professional Exterminators",
-    description: "Expert pest control services in Augusta, ME. State capital pest management for government buildings, homes & businesses. Licensed & insured.",
+    slug: "pest-control-augusta-me",
+    title: "Pest Control in Augusta, ME | Maine Pest Pros",
+    description: "Same day pest control Augusta, Maine. Licensed exterminators for ants, rodents, bed bugs. Emergency service available. Call (207) 215-0860",
     population: "18,899",
-    keyPests: ["Carpenter Ants", "Rodents", "Stinging Insects", "Ticks"],
-    zipCodes: ["04330", "04332", "04333", "04336"]
+    keyPests: ["Ants", "Spiders", "Rodents", "Stinging Insects"],
+    zipCodes: ["04330", "04332", "04333", "04338"]
+  },
+  {
+    city: "Waterville",
+    slug: "pest-control-waterville-me",
+    title: "Pest Control in Waterville, ME | Maine Pest Pros",
+    description: "24 hour pest control Waterville, Maine. Affordable extermination for ants, rodents, bed bugs. Pet safe treatments. Call (207) 215-0860",
+    population: "15,722",
+    keyPests: ["Ants", "Mice & Rats", "Bed Bugs", "Spiders"],
+    zipCodes: ["04901", "04903"]
+  },
+  {
+    city: "Lewiston",
+    slug: "pest-control-lewiston-me",
+    title: "Pest Control in Lewiston, ME | Maine Pest Pros",
+    description: "Emergency pest control Lewiston, Maine. Commercial & residential extermination. Organic treatments available. Call (207) 215-0860",
+    population: "36,221",
+    keyPests: ["Bed Bugs", "Cockroaches", "Mice & Rats", "Ants"],
+    zipCodes: ["04240", "04241", "04243"]
+  },
+  {
+    city: "Auburn",
+    slug: "pest-control-auburn-me",
+    title: "Pest Control in Auburn, ME | Maine Pest Pros",
+    description: "Same day pest control Auburn, Maine. Pet safe extermination for ants, rodents, wasps. Licensed professionals. Call (207) 215-0860",
+    population: "24,061",
+    keyPests: ["Ants", "Wasps", "Mice & Rats", "Spiders"],
+    zipCodes: ["04210", "04211", "04212"]
   },
   {
     city: "Bangor",
-    slug: "bangor-pest-control",
-    title: "Pest Control Bangor Maine | Queen City Exterminators", 
-    description: "Professional pest control in Bangor, ME. Comprehensive extermination for Northern Maine homes & businesses. Same-day service available.",
+    slug: "pest-control-bangor-me",
+    title: "Pest Control in Bangor, ME | Maine Pest Pros",
+    description: "Affordable pest control Bangor, Maine. 24 hour emergency service for ticks, mosquitoes, ants, rodents. Call (207) 215-0860",
     population: "31,753",
-    keyPests: ["Mice & Rats", "Spiders", "Mosquitoes", "Wasps"],
+    keyPests: ["Ticks", "Mosquitoes", "Ants", "Mice & Rats"],
     zipCodes: ["04401", "04402"]
+  },
+  {
+    city: "Gardiner",
+    slug: "pest-control-gardiner-me",
+    title: "Pest Control in Gardiner, ME | Maine Pest Pros",
+    description: "Organic pest control Gardiner, Maine. Same day service for ants, spiders, rodents. Commercial treatments available. Call (207) 215-0860",
+    population: "5,597",
+    keyPests: ["Ants", "Spiders", "Mice & Rats", "Wasps"],
+    zipCodes: ["04345"]
+  },
+  {
+    city: "Skowhegan",
+    slug: "pest-control-skowhegan-me",
+    title: "Pest Control in Skowhegan, ME | Maine Pest Pros",
+    description: "Emergency pest control Skowhegan, Maine. Pet safe treatments for ants, rodents, stinging insects. 24 hour service. Call (207) 215-0860",
+    population: "8,192",
+    keyPests: ["Ants", "Stinging Insects", "Mice & Rats", "Spiders"],
+    zipCodes: ["04976"]
+  },
+  {
+    city: "Brewer",
+    slug: "pest-control-brewer-me",
+    title: "Pest Control in Brewer, ME | Maine Pest Pros",
+    description: "Affordable pest control Brewer, Maine. Same day extermination for ticks, mosquitoes, ants. Commercial service available. Call (207) 215-0860",
+    population: "9,672",
+    keyPests: ["Ticks", "Mosquitoes", "Ants", "Spiders"],
+    zipCodes: ["04412"]
+  },
+  {
+    city: "Pittsfield",
+    slug: "pest-control-pittsfield-me",
+    title: "Pest Control in Pittsfield, ME | Maine Pest Pros",
+    description: "Organic pest control Pittsfield, Maine. 24 hour emergency service for ants, rodents, wasps. Pet safe treatments. Call (207) 215-0860",
+    population: "3,875",
+    keyPests: ["Ants", "Mice & Rats", "Wasps", "Spiders"],
+    zipCodes: ["04967"]
+  },
+  {
+    city: "Winslow",
+    slug: "pest-control-winslow-me",
+    title: "Pest Control in Winslow, ME | Maine Pest Pros",
+    description: "Same day pest control Winslow, Maine. Affordable extermination for ants, bed bugs, rodents. Commercial treatments. Call (207) 215-0860",
+    population: "7,794",
+    keyPests: ["Ants", "Bed Bugs", "Mice & Rats", "Spiders"],
+    zipCodes: ["04901"]
+  },
+  {
+    city: "Oakland",
+    slug: "pest-control-oakland-me",
+    title: "Pest Control in Oakland, ME | Maine Pest Pros",
+    description: "Emergency pest control Oakland, Maine. Pet safe treatments for ants, spiders, rodents. 24 hour service available. Call (207) 215-0860",
+    population: "6,369",
+    keyPests: ["Ants", "Spiders", "Mice & Rats", "Wasps"],
+    zipCodes: ["04963"]
+  },
+  {
+    city: "Belgrade",
+    slug: "pest-control-belgrade-me",
+    title: "Pest Control in Belgrade, ME | Maine Pest Pros",
+    description: "Organic pest control Belgrade, Maine. Same day service for ants, mosquitoes, rodents. Affordable commercial treatments. Call (207) 215-0860",
+    population: "3,318",
+    keyPests: ["Ants", "Mosquitoes", "Mice & Rats", "Ticks"],
+    zipCodes: ["04917"]
+  },
+  {
+    city: "Fairfield",
+    slug: "pest-control-fairfield-me",
+    title: "Pest Control in Fairfield, ME | Maine Pest Pros",
+    description: "24 hour pest control Fairfield, Maine. Pet safe extermination for ants, wasps, rodents. Emergency service available. Call (207) 215-0860",
+    population: "6,573",
+    keyPests: ["Ants", "Wasps", "Mice & Rats", "Spiders"],
+    zipCodes: ["04937"]
+  },
+  {
+    city: "China",
+    slug: "pest-control-china-me",
+    title: "Pest Control in China, ME | Maine Pest Pros",
+    description: "Same day pest control China, Maine. Affordable treatments for ants, ticks, rodents. Organic options available. Call (207) 215-0860",
+    population: "4,408",
+    keyPests: ["Ants", "Ticks", "Mice & Rats", "Spiders"],
+    zipCodes: ["04926"]
+  },
+  {
+    city: "Benton",
+    slug: "pest-control-benton-me",
+    title: "Pest Control in Benton, ME | Maine Pest Pros",
+    description: "Emergency pest control Benton, Maine. Pet safe treatments for ants, spiders, rodents. Commercial service available. Call (207) 215-0860",
+    population: "2,617",
+    keyPests: ["Ants", "Spiders", "Mice & Rats", "Wasps"],
+    zipCodes: ["04901"]
+  },
+  {
+    city: "Belfast",
+    slug: "pest-control-belfast-me",
+    title: "Pest Control in Belfast, ME | Maine Pest Pros",
+    description: "Organic pest control Belfast, Maine. 24 hour service for ticks, mosquitoes, ants. Same day treatments available. Call (207) 215-0860",
+    population: "6,710",
+    keyPests: ["Ticks", "Mosquitoes", "Ants", "Spiders"],
+    zipCodes: ["04915"]
+  },
+  {
+    city: "Liberty",
+    slug: "pest-control-liberty-me",
+    title: "Pest Control in Liberty, ME | Maine Pest Pros",
+    description: "Affordable pest control Liberty, Maine. Pet safe extermination for ants, ticks, rodents. Emergency service available. Call (207) 215-0860",
+    population: "971",
+    keyPests: ["Ants", "Ticks", "Mice & Rats", "Spiders"],
+    zipCodes: ["04949"]
+  },
+  {
+    city: "Orono",
+    slug: "pest-control-orono-me",
+    title: "Pest Control in Orono, ME | Maine Pest Pros",
+    description: "Same day pest control Orono, Maine. Commercial & residential treatments for ants, bed bugs, rodents. Organic options. Call (207) 215-0860",
+    population: "10,362",
+    keyPests: ["Ants", "Bed Bugs", "Mice & Rats", "Ticks"],
+    zipCodes: ["04469", "04473"]
   }
 ];
 
 export const SEO_KEYWORDS = {
-  primary: ["pest control Maine", "exterminator Maine", "pest control services Maine"],
-  services: [
-    "ant control Maine", "rodent control Maine", "bed bug treatment Maine",
-    "wasp removal Maine", "mosquito control Maine", "spider control Maine"
+  primary: "pest control Maine",
+  serviceKeywords: [
+    "ant control", "rodent control", "bed bug exterminator",
+    "wasp nest removal", "mosquito treatment", "termite inspection"
   ],
-  local: [
-    "pest control Portland ME", "pest control Augusta ME", "pest control Bangor ME",
-    "exterminator Portland Maine", "exterminator Augusta Maine", "exterminator Bangor Maine"
+  intentModifiers: [
+    "same day", "24 hour", "organic", "pet safe", "commercial",
+    "affordable", "emergency"
+  ],
+  geoList: [
+    "Augusta", "Waterville", "Lewiston", "Auburn", "Gardiner", "Skowhegan",
+    "Bangor", "Brewer", "Pittsfield", "Winslow", "Oakland", "Belgrade",
+    "Fairfield", "China", "Benton", "Belfast", "Liberty", "Orono"
   ]
 };
 
