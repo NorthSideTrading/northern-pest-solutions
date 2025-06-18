@@ -19,7 +19,7 @@ export default function ServiceCard({ id, name, description, image }: ServiceCar
   };
   
   // Get the appropriate image path or URL
-  const imageUrl = isAbsoluteUrl(image) ? image : `/.netlify/images?url=${image}&w=400&h=300&q=80`;
+  const imageUrl = isAbsoluteUrl(image) ? image : image;
   
   return (
     <Card ref={ref} className="bg-[var(--nps-ivory)] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

@@ -23,7 +23,7 @@ export const SERVICES = [
     id: "ants",
     name: "Ant",
     description: "Professional ant extermination services in Maine. Licensed pest control for carpenter ants, pavement ants & sugar ants.",
-    image: "/images/ant-control-realistic.png",
+    image: "https://images.unsplash.com/photo-1583239542616-95d3c32caf46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Ants are the most common household pest in Maine homes and businesses. Our licensed ant control experts provide comprehensive extermination services throughout Central Maine, including Portland, Augusta, Bangor, and Waterville. We eliminate carpenter ant colonies that damage wood structures and pavement ants that invade kitchens.",
     problems: [
       "Kitchen and food storage contamination",
@@ -43,7 +43,7 @@ export const SERVICES = [
     id: "bed-bugs",
     name: "Bed Bugs",
     description: "Expert bed bug extermination in Maine. Heat treatment & chemical solutions for hotels, homes & apartments.",
-    image: "/images/bed-bug-control-realistic.jpg",
+    image: "https://images.unsplash.com/photo-1584735175315-9d5df23860ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Bed bugs are a serious problem in Maine hotels, apartments, and homes. Our certified bed bug exterminators use proven heat treatment and targeted chemical applications to eliminate infestations completely. We serve Portland, Augusta, Bangor, and all Central Maine communities with guaranteed bed bug removal.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
@@ -188,7 +188,7 @@ export const SERVICES = [
     id: "stinging-insects",
     name: "Stinging Insects",
     description: "Expert wasp & hornet removal in Maine. Safe bee relocation & yellow jacket nest elimination.",
-    image: "/images/stinging-insects-control-realistic.png",
+    image: "https://images.unsplash.com/photo-1551024739-4bd5b9336abe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
     longDescription: "Maine summers bring active wasp, hornet, and yellow jacket populations that threaten families and pets. Our licensed pest control technicians safely remove dangerous nests from homes and businesses throughout Central Maine. We provide emergency wasp removal services in Portland, Augusta, Bangor, and surrounding communities with same-day service available.",
     problems: [
       "Painful stings that can cause severe allergic reactions",
