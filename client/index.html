@@ -20,10 +20,14 @@
         --nps-ivory: #F5F7F4;
         --nps-amber: #F6D04D;
       }
-      body { margin: 0; font-family: Inter, system-ui, sans-serif; line-height: 1.6; }
-      .hero { background: var(--nps-forest); color: white; padding: 6rem 1rem 4rem; min-height: 60vh; }
-      .container { max-width: 1200px; margin: 0 auto; }
-      .btn-primary { background: var(--nps-amber); color: var(--nps-forest); padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block; }
+      body { margin: 0; font-family: Inter, system-ui, sans-serif; line-height: 1.6; background: #F5F7F4; }
+      .hero-container { background: #FDDED6; color: white; padding: 6rem 1rem 4rem; min-height: 70vh; position: relative; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      .btn-primary { background: var(--nps-amber); color: var(--nps-forest); padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.2s; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(27, 60, 47, 0.2); }
+      header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--nps-forest); }
+      main { padding-top: 0; }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->

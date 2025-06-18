@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://www.mainepestpros.com/sitemap.xml
+
+# Block crawling of admin or private areas (if any)
+Disallow: /admin/
+Disallow: /.env
+Disallow: /api/private/
