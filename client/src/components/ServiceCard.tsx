@@ -23,8 +23,12 @@ export default function ServiceCard({ id, name, description, image }: ServiceCar
       <div className="w-full h-48 overflow-hidden">
         <img 
           src={imageUrl} 
-          alt={`${name} control services`} 
+          alt={`${name} control services in Maine - Professional pest extermination`} 
           className="w-full h-full object-cover transition-transform hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          width="400"
+          height="300"
         />
       </div>
       <CardContent className="p-6">

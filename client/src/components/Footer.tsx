@@ -20,6 +20,10 @@ export default function Footer() {
                     src={mainePestProsLogo}
                     alt="Maine Pest Pros logo"
                     className="h-12 w-auto brightness-0 invert"
+                    loading="lazy"
+                    decoding="async"
+                    width="48"
+                    height="48"
                   />
                 </div>
                 <div className="flex flex-col">

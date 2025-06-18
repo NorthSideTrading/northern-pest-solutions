@@ -216,9 +216,10 @@ export default function Header() {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[var(--nps-amber)] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[var(--nps-amber)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--nps-amber)]"
               aria-controls="mobile-menu"
               aria-expanded={mobileMenuOpen}
+              aria-label="Toggle navigation menu"
               onClick={toggleMobileMenu}
             >
               <span className="sr-only">Open main menu</span>

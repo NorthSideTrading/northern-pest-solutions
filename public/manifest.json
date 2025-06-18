@@ -1,0 +1,23 @@
+{
+  "name": "Maine Pest Pros - Professional Pest Control Services",
+  "short_name": "Maine Pest Pros",
+  "description": "Professional pest control services in Maine. Licensed exterminators for ants, rodents, bed bugs, wasps & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B3C2F",
+  "theme_color": "#1B3C2F",
+  "icons": [
+    {
+      "src": "/images/maine-pest-pros-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/maine-pest-pros-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "orientation": "portrait-primary"
+}
