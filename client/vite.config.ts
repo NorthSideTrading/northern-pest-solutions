@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import sitemap from 'vite-plugin-sitemap'
 
 export default defineConfig({
   base: '/',
-  plugins: [react()],
+  plugins: [
+    react(),
+    sitemap({ hostname: "https://www.mainepestpros.com" })
+  ],
   resolve: { 
     alias: { '@': path.resolve(__dirname, 'src') }
   },
