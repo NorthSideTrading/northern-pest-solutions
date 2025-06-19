@@ -1,0 +1,63 @@
+# ====  auto-diagnose & fix broken images on mainepestpros.com  =========
+# CONFIG — change nothing unless you need to skip the move
+DOM=https://www.mainepestpros.com
+MOVE_IMAGES=true   # set to false if you use import logo from '…'
+
+# 1 ▸ DIAGNOSE — grab first 10 image URLs from live home page, check status
+echo "🔍 Checking live images…"
+urls=$(curl -s $DOM | grep -Eo 'src="[^"]+\.(png|jpe?g|webp|avif)"' | \
+      sed -E 's/src="([^"]+)"/\1/' | head -n 10)
+bad=()
+for u in $urls; do
+  code=$(curl -s -o /dev/null -w '%{http_code} %{content_type}\n' "$DOM$u")
+  echo "$u  →  $code"
+  [[ "$code" =~ 404|html ]] && bad+=("$u")
+done
+[[ ${#bad[@]} -eq 0 ]] && echo "✅ No obvious image issues" && exit 0
+
+# 2 ▸ AUTO-REPAIR
+echo -e "\n🛠  Fixing image handling…"
+
+# 2a  ensure images are served verbatim from public/ (skip if MOVE_IMAGES=false)
+if $MOVE_IMAGES; then
+  mkdir -p public/images
+  find src -type f -iregex '.*\.\(png\|jpe\?g\|webp\|avif\)' -exec bash -c \
+     'path="$1"; cp "$path" "public/images/$(basename "$path")";' _ {} \;
+fi
+
+# 2b  rewrite JSX/HTML src paths that point outside public/images
+grep -RIl --exclude-dir=node_modules -E 'src="/?(assets|static|images)/' src | while read f; do
+  sed -i -E 's/src="\.?\/?(assets|static)\/([^"]+)"/src="\/images\/\2"/g' "$f"
+done
+
+# 2c  _redirects — guarantee Netlify serves images before SPA fallback
+mkdir -p public
+cat > public/_redirects <<'NET'
+/sitemap.xml   /sitemap.xml   200
+/robots.txt    /robots.txt    200
+/images/*      /images/:s     200
+/*             /index.html    200
+NET
+
+# 3 ▸ REBUILD & SMOKE-TEST
+npm run build
+echo -e "\n🔁 Re-checking the same image URLs after build…"
+for u in "${bad[@]}"; do
+  code=$(curl -s -o /dev/null -w '%{http_code} %{content_type}\n' "$DOM$u")
+  echo "$u  →  $code"
+done
+
+# abort deploy if any still return bad content
+fail=0
+for u in "${bad[@]}"; do
+  code=$(curl -s -o /dev/null -w '%{content_type}\n' "$DOM$u")
+  [[ "$code" =~ html ]] && fail=1
+done
+[[ $fail -eq 1 ]] && { echo "❌  Some images still wrong – aborting"; exit 1; }
+
+# 4 ▸ COMMIT & PUSH
+git add public/_redirects public/images || true
+git commit -am "fix: move images + safe redirects + path rewrite"
+git push
+echo "✅  Images repaired and deployed"
+# ======================================================================
