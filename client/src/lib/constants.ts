@@ -23,7 +23,7 @@ export const SERVICES = [
     id: "ants",
     name: "Ant",
     description: "Professional ant extermination services in Maine. Licensed pest control for carpenter ants, pavement ants & sugar ants.",
-    image: "/images/ant-control.jpg",
+    image: "/images/ants-service-optimized.jpg",
     longDescription: "Ants are the most common household pest in Maine homes and businesses. Our licensed ant control experts provide comprehensive extermination services throughout Central Maine, including Portland, Augusta, Bangor, and Waterville. We eliminate carpenter ant colonies that damage wood structures and pavement ants that invade kitchens.",
     problems: [
       "Kitchen and food storage contamination",
