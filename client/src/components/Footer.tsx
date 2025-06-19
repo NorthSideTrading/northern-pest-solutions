@@ -1,7 +1,6 @@
 import { Link } from 'wouter';
 import { Clock, Mail, Phone } from 'lucide-react';
 import { COMPANY_INFO, NAVIGATION, SERVICES, LOCAL_PAGES } from '@/lib/constants';
-import mainePestProsLogo from '/images/maine-pest-pros-logo.png';
 
 export default function Footer() {
   // Only show the first 5 services in the footer
@@ -17,7 +16,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0">
                   <img
-                    src={mainePestProsLogo}
+                    src="/images/maine-pest-pros-logo.png"
                     alt="Maine Pest Pros logo"
                     className="h-12 w-auto brightness-0 invert"
                     loading="lazy"

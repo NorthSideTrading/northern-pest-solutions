@@ -3,7 +3,6 @@ import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
-const mainePestProsLogo = '/images/maine-pest-pros-logo.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -125,7 +124,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                  src={mainePestProsLogo}
+                  src="/images/maine-pest-pros-logo.png"
                   alt="Maine Pest Pros logo"
                   className="h-16 w-auto"
                   width="256"
