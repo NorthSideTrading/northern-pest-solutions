@@ -188,7 +188,7 @@ export const SERVICES = [
     id: "stinging-insects",
     name: "Stinging Insects",
     description: "Expert wasp & hornet removal in Maine. Safe bee relocation & yellow jacket nest elimination.",
-    image: "/images/stinging-insects-control-realistic.png",
+    image: "/images/wasp-removal.jpg",
     longDescription: "Maine summers bring active wasp, hornet, and yellow jacket populations that threaten families and pets. Our licensed pest control technicians safely remove dangerous nests from homes and businesses throughout Central Maine. We provide emergency wasp removal services in Portland, Augusta, Bangor, and surrounding communities with same-day service available.",
     problems: [
       "Painful stings that can cause severe allergic reactions",
