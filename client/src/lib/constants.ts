@@ -23,7 +23,7 @@ export const SERVICES = [
     id: "ants",
     name: "Ant",
     description: "Professional ant extermination services in Maine. Licensed pest control for carpenter ants, pavement ants & sugar ants.",
-    image: "/images/ant-control-realistic.png",
+    image: "/images/ant-control.jpg",
     longDescription: "Ants are the most common household pest in Maine homes and businesses. Our licensed ant control experts provide comprehensive extermination services throughout Central Maine, including Portland, Augusta, Bangor, and Waterville. We eliminate carpenter ant colonies that damage wood structures and pavement ants that invade kitchens.",
     problems: [
       "Kitchen and food storage contamination",
@@ -43,7 +43,7 @@ export const SERVICES = [
     id: "bed-bugs",
     name: "Bed Bugs",
     description: "Expert bed bug extermination in Maine. Heat treatment & chemical solutions for hotels, homes & apartments.",
-    image: "/images/bed-bug-control-realistic.jpg",
+    image: "/images/bed-bug-treatment.jpg",
     longDescription: "Bed bugs are a serious problem in Maine hotels, apartments, and homes. Our certified bed bug exterminators use proven heat treatment and targeted chemical applications to eliminate infestations completely. We serve Portland, Augusta, Bangor, and all Central Maine communities with guaranteed bed bug removal.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
@@ -106,7 +106,7 @@ export const SERVICES = [
     id: "mice-rats",
     name: "Mice & Rats",
     description: "Effective rodent control and prevention strategies for your property.",
-    image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "/images/rodent-control.jpg",
     longDescription: "Rodents can cause significant damage to homes and businesses while posing serious health risks. Our comprehensive rodent control approach combines exclusion, trapping, and preventive measures to create a rodent-free environment.",
     problems: [
       "Structural damage from gnawing and nest-building",
