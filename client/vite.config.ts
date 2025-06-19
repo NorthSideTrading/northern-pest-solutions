@@ -23,7 +23,8 @@ export default defineConfig({
           query: ['@tanstack/react-query']
         }
       }
-    }
+    },
+    copyPublicDir: true
   },
   publicDir: '../public'
 });

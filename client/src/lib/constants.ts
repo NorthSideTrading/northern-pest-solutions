@@ -64,7 +64,7 @@ export const SERVICES = [
     id: "cockroaches",
     name: "Cockroaches",
     description: "Effective cockroach elimination strategies to safeguard your health and property.",
-    image: "/images/bed-bug-treatment.jpg",
+    image: "/images/ant-control.jpg",
     longDescription: "Cockroaches are more than just a nuisance - they're a serious health hazard. Our cockroach control services utilize integrated pest management techniques to eliminate existing populations and prevent future infestations.",
     problems: [
       "Spread of bacteria and pathogens",
@@ -85,7 +85,7 @@ export const SERVICES = [
     id: "fleas",
     name: "Fleas",
     description: "Comprehensive flea control for your home and protection for your pets.",
-    image: "/images/wasp-removal.jpg",
+    image: "/images/bed-bugs.webp",
     longDescription: "Fleas cause discomfort for both pets and people with their itchy bites and ability to spread quickly throughout homes. Our flea control strategies address adult fleas, larvae, and eggs to break the life cycle and provide lasting relief.",
     problems: [
       "Painful, itchy bites on pets and humans",
@@ -127,7 +127,7 @@ export const SERVICES = [
     id: "mosquitoes",
     name: "Mosquitoes",
     description: "Reclaim your outdoor spaces with effective mosquito control services.",
-    image: "/images/ant-control.jpg",
+    image: "/images/wasp-removal.jpg",
     longDescription: "Maine's mosquito season can make outdoor activities unpleasant and potentially dangerous. Our mosquito control programs target breeding sites and adult populations to significantly reduce mosquito activity around your property.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
@@ -148,7 +148,7 @@ export const SERVICES = [
     id: "snakes",
     name: "Snakes",
     description: "Professional snake removal and exclusion for peace of mind.",
-    image: "/images/bed-bug-treatment.jpg",
+    image: "/images/rodent-control.jpg",
     longDescription: "While most snakes in Maine are non-venomous, their presence can still be concerning for homeowners. Our snake control services focus on humane removal and exclusion methods to keep these reptiles out of your living spaces.",
     problems: [
       "Fear and anxiety for residents",
