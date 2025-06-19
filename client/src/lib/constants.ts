@@ -168,7 +168,7 @@ export const SERVICES = [
     id: "spiders",
     name: "Spiders",
     description: "Eliminate spiders and web formations with our specialized treatments.",
-    image: "/images/bed-bug-treatment.jpg",
+    image: "/images/ant-control.jpg",
     longDescription: "While most spiders are beneficial, their presence inside homes can be unwelcome. Our spider control program focuses on web removal, perimeter treatments, and exclusion methods to keep spiders outdoors where they belong.",
     problems: [
       "Unsightly webs in and around homes",
@@ -209,7 +209,7 @@ export const SERVICES = [
     id: "ticks",
     name: "Ticks",
     description: "Protect your family and pets from tick-borne diseases with our control methods.",
-    image: "/images/ant-control.jpg",
+    image: "/images/bed-bugs.webp",
     longDescription: "Ticks pose serious health risks in Maine as carriers of Lyme disease and other illnesses. Our tick control program targets both adults and nymphs in your yard to significantly reduce exposure risks for your family and pets.",
     problems: [
       "Transmission of Lyme disease and other serious illnesses",
