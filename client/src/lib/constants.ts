@@ -43,7 +43,7 @@ export const SERVICES = [
     id: "bed-bugs",
     name: "Bed Bugs",
     description: "Expert bed bug extermination in Maine. Heat treatment & chemical solutions for hotels, homes & apartments.",
-    image: "/images/bed-bug-treatment.jpg",
+    image: "/images/bed-bug-service-optimized.jpg",
     longDescription: "Bed bugs are a serious problem in Maine hotels, apartments, and homes. Our certified bed bug exterminators use proven heat treatment and targeted chemical applications to eliminate infestations completely. We serve Portland, Augusta, Bangor, and all Central Maine communities with guaranteed bed bug removal.",
     problems: [
       "Painful, itchy bites that can cause allergic reactions",
