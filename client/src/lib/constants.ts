@@ -106,7 +106,7 @@ export const SERVICES = [
     id: "mice-rats",
     name: "Mice & Rats",
     description: "Effective rodent control and prevention strategies for your property.",
-    image: "/images/rodent-control.jpg",
+    image: "/images/mice-rats-service-optimized.jpg",
     longDescription: "Rodents can cause significant damage to homes and businesses while posing serious health risks. Our comprehensive rodent control approach combines exclusion, trapping, and preventive measures to create a rodent-free environment.",
     problems: [
       "Structural damage from gnawing and nest-building",
