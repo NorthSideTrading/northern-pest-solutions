@@ -124,7 +124,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                  src="/images/maine-pest-pros-logo.png"
+                  src="/images/pest-control-logo-optimized.png"
                   alt="Maine Pest Pros logo"
                   className="h-16 w-auto"
                   width="256"

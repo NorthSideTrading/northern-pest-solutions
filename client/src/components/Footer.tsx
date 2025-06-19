@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0">
                   <img
-                    src="/images/maine-pest-pros-logo.png"
+                    src="/images/pest-control-logo-optimized.png"
                     alt="Maine Pest Pros logo"
                     className="h-12 w-auto brightness-0 invert"
                     loading="lazy"
