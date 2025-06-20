@@ -80,6 +80,16 @@ export default function FAQSection() {
             ))}
           </div>
           
+          {/* SEO INSERT: prevention FAQ */}
+          <div className="mt-8 bg-green-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Do you offer quarterly pest-prevention plans?</h3>
+            <p className="text-gray-700">
+              Yes—our quarterly plan blocks ants, rodents, spiders, and ticks; perfect for Maine's four-season pest cycle. 
+              This comprehensive program includes seasonal inspections and targeted treatments to prevent infestations 
+              before they start, saving you time and money year-round.
+            </p>
+          </div>
+          
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">
               Have more questions about pest control in Maine?

@@ -13,6 +13,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Critical CSS inline for immediate rendering -->
+    <!-- PestControl Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "Maine Pest Pros",
+      "url": "https://www.mainepestpros.com",
+      "areaServed": [
+        {"@type": "City", "name": "Portland", "addressRegion": "ME"},
+        {"@type": "City", "name": "Bangor", "addressRegion": "ME"},
+        {"@type": "City", "name": "Lewiston", "addressRegion": "ME"},
+        {"@type": "City", "name": "Augusta", "addressRegion": "ME"},
+        {"@type": "City", "name": "South Portland", "addressRegion": "ME"}
+      ],
+      "telephone": "+1-207-215-0860",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "ME",
+        "addressCountry": "US"
+      },
+      "serviceType": ["Bed Bug Control", "Rodent Control", "Ant Control", "Wasp Removal", "Spider Control"],
+      "availableService": [
+        {
+          "@type": "Service",
+          "name": "Emergency Pest Control",
+          "description": "24/7 emergency pest control services throughout Maine"
+        },
+        {
+          "@type": "Service", 
+          "name": "Bed Bug Heat Treatment",
+          "description": "Chemical-free bed bug elimination using industrial heat treatment"
+        }
+      ]
+    }
+    </script>
+
     <style>
       :root {
         --nps-forest: #1B3C2F;

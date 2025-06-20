@@ -69,6 +69,25 @@ export default function Home() {
         subtitle="Protect your home and business from unwanted pests with our trusted and effective solutions."
       />
 
+      {/* SEO INSERT: keyword-dense hero */}
+      <section id="hero-seo" className="py-16 bg-amber-50 text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Maine's 24/7 Exterminator—Bed Bugs, Rodents, Ants & More
+          </h1>
+          <p className="text-xl text-gray-700 mb-8">
+            From <strong>Portland</strong> to <strong>Bangor</strong>, Maine Pest Pros crushes
+            infestations fast. Google <em>"pest control Maine"</em>—we'll be there in an hour.
+          </p>
+          <a 
+            href="#contact" 
+            className="mt-6 inline-block px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700 transition-colors"
+          >
+            Book Same-Day Service
+          </a>
+        </div>
+      </section>
+
       {/* Combined Features & Services Section */}
       <section id="services" className="pt-16 pb-12 bg-white">
         <div className="container mx-auto px-4">
@@ -231,6 +250,35 @@ export default function Home() {
                   Not sure if we service your area? Contact us
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO INSERT: bed-bug service block */}
+      <section id="bed-bug-heat" className="py-14 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Bed Bug Heat Treatments Across Maine
+            </h2>
+            <p className="text-lg text-gray-700 mb-8">
+              Our industrial heaters wipe out bed bugs and eggs in a single day—no chemicals needed.
+              Top search in <strong>Lewiston ME</strong>: "bed bug removal Lewiston," now covered.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Chemical-Free</h3>
+                <p className="text-gray-600">Heat treatment eliminates bed bugs without toxic chemicals, safe for families and pets.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Results</h3>
+                <p className="text-gray-600">Complete elimination in a single treatment session, no waiting for multiple visits.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">All Life Stages</h3>
+                <p className="text-gray-600">Heat penetrates mattresses and furniture to kill adults, nymphs, and eggs.</p>
               </div>
             </div>
           </div>

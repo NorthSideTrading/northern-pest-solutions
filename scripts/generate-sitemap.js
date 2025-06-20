@@ -31,7 +31,13 @@ const pages = [
   { url: '/pest-control-benton-me', priority: '0.6', changefreq: 'monthly' },
   { url: '/pest-control-china-me', priority: '0.6', changefreq: 'monthly' },
   { url: '/pest-control-liberty-me', priority: '0.6', changefreq: 'monthly' },
-  { url: '/pest-control-orono-me', priority: '0.6', changefreq: 'monthly' }
+  { url: '/pest-control-orono-me', priority: '0.6', changefreq: 'monthly' },
+  // Service area pages with high priority for major cities
+  { url: '/pest-control-portland-me', priority: '0.9', changefreq: 'weekly' },
+  { url: '/pest-control-bangor-me', priority: '0.8', changefreq: 'weekly' },
+  { url: '/pest-control-lewiston-me', priority: '0.8', changefreq: 'weekly' },
+  { url: '/pest-control-augusta-me', priority: '0.8', changefreq: 'weekly' },
+  { url: '/pest-control-south-portland-me', priority: '0.7', changefreq: 'weekly' }
 ];
 
 // Generate XML sitemap
