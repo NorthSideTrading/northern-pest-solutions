@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
+import { trackEvent } from '../../lib/analytics';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
