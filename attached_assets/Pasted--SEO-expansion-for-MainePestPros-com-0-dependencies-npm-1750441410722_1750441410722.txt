@@ -1,0 +1,76 @@
+# === SEO expansion for MainePestPros.com ===============================
+
+# 0 ▸ dependencies
+npm i -D slugify vite-plugin-sitemap sitemap-ts
+
+# 1 ▸ build /service-areas pages for high-volume towns
+mkdir -p src/pages/service-areas
+for city in "Portland" "Bangor" "Lewiston" "Augusta" "South Portland"; do
+  slug=$(npx slugify "pest control $city me")
+  cat > "src/pages/service-areas/${slug}.jsx" <<PAGE
+import Layout from '../../components/Layout';
+export default function ${slug//-/_}() {
+  return <Layout title="Pest Control $city ME | Maine Pest Pros">
+    <h1>Expert Exterminator in $city, Maine</h1>
+    <p>
+      Need <strong>pest control $city ME</strong> fast? We eliminate bed bugs,
+      rodents, ants, and termites—24/7 emergency response.
+    </p>
+  </Layout>;
+}
+PAGE
+done
+
+# 2 ▸ inject keyword-dense hero on Home page
+cat >> src/pages/Home.jsx <<'HOME'
+
+{/* === SEO INSERT: keyword-dense hero ================================= */}
+<section id="hero-seo" className="py-16 bg-amber-50 text-center">
+  <h1>Maine’s 24/7 Exterminator—Bed Bugs, Rodents, Ants & More</h1>
+  <p>From <strong>Portland</strong> to <strong>Bangor</strong>, Maine Pest Pros crushes
+     infestations fast. Google <em>“pest control Maine”</em>—we’ll be there in an hour.</p>
+  <a href="#contact" className="mt-6 inline-block px-6 py-3 bg-green-600 text-white rounded">
+    Book Same-Day Service
+  </a>
+</section>
+{/* ==================================================================== */}
+HOME
+
+# 3 ▸ append service blocks + FAQ swap
+cat >> src/pages/Services.jsx <<'SERV'
+{/* === SEO INSERT: bed-bug block ===================================== */}
+<section id="bed-bug-heat" className="service-block py-14 bg-gray-50">
+  <h2>Bed Bug Heat Treatments Across Maine</h2>
+  <p>Our industrial heaters wipe out bed bugs and eggs in a single day—no chemicals needed.
+     Top search in <strong>Lewiston ME</strong>: “bed bug removal Lewiston,” now covered.</p>
+</section>
+SERV
+
+cat >> src/pages/FAQ.jsx <<'FAQ'
+
+{/* === SEO INSERT: prevention FAQ ==================================== */}
+<div className="faq">
+  <h3>Do you offer quarterly pest-prevention plans?</h3>
+  <p>Yes—our quarterly plan blocks ants, rodents, spiders, and ticks; perfect for Maine’s four-season pest cycle.</p>
+</div>
+FAQ
+
+# 4 ▸ add PestControl schema in <head>
+grep -q '"@type":"PestControl"' public/index.html || \
+sed -i '/<\/head>/i <script type="application/ld+json">{ "@context":"https://schema.org","@type":"PestControl","name":"Maine Pest Pros","url":"https://www.mainepestpros.com","areaServed":[{"@type":"City","name":"Portland"},{"@type":"City","name":"Bangor"},{"@type":"City","name":"Lewiston"},{"@type":"City","name":"Augusta"},{"@type":"City","name":"South Portland"}],"telephone":"+1-207-555-0199" }</script>' public/index.html
+
+# 5 ▸ reinforce Netlify redirects (XML & images safe)
+mkdir -p public
+cat > public/_redirects <<'NET'
+/sitemap.xml   /sitemap.xml   200
+/robots.txt    /robots.txt    200
+/images/*      /images/:s     200
+/*             /index.html    200
+NET
+
+# 6 ▸ build & deploy
+npm run build
+git add .
+git commit -m "SEO: add pest-control city pages, hero, service block, schema, redirects"
+git push
+# ======================================================================

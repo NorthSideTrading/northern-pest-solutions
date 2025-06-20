@@ -46,6 +46,13 @@ const Belfast = lazy(() => import("@/pages/cities/belfast"));
 const Liberty = lazy(() => import("@/pages/cities/liberty"));
 const Orono = lazy(() => import("@/pages/cities/orono"));
 
+// Lazy load service area pages
+const PestControlPortlandMe = lazy(() => import("@/pages/service-areas/pest-control-portland-me"));
+const PestControlBangorMe = lazy(() => import("@/pages/service-areas/pest-control-bangor-me"));
+const PestControlLewistonMe = lazy(() => import("@/pages/service-areas/pest-control-lewiston-me"));
+const PestControlAugustaMe = lazy(() => import("@/pages/service-areas/pest-control-augusta-me"));
+const PestControlSouthPortlandMe = lazy(() => import("@/pages/service-areas/pest-control-south-portland-me"));
+
 // Loading component for Suspense fallbacks
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-64">
@@ -90,6 +97,14 @@ function Router() {
         <Route path="/pest-control-belfast-me" component={Belfast} />
         <Route path="/pest-control-liberty-me" component={Liberty} />
         <Route path="/pest-control-orono-me" component={Orono} />
+        
+        {/* Service Area Pages */}
+        <Route path="/pest-control-portland-me" component={PestControlPortlandMe} />
+        <Route path="/pest-control-bangor-me" component={PestControlBangorMe} />
+        <Route path="/pest-control-lewiston-me" component={PestControlLewistonMe} />
+        <Route path="/pest-control-augusta-me" component={PestControlAugustaMe} />
+        <Route path="/pest-control-south-portland-me" component={PestControlSouthPortlandMe} />
+        
         <Route component={NotFound} />
       </Switch>
     </Suspense>
