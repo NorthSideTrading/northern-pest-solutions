@@ -32,6 +32,9 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Track contact form submission
+    trackEvent('form_submit', 'contact', 'contact_form');
+    
     // Simulate form submission
     setTimeout(() => {
       toast({
