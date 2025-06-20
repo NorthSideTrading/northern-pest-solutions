@@ -82,6 +82,7 @@ export default function Home() {
           <a 
             href="#contact" 
             className="mt-6 inline-block px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700 transition-colors"
+            onClick={() => trackEvent('click', 'cta', 'hero_same_day_service')}
           >
             Book Same-Day Service
           </a>
@@ -141,7 +142,10 @@ export default function Home() {
                 <Bug className="w-10 h-10 mb-4 text-[var(--nps-amber)]" />
                 <h3 className="text-2xl font-bold mb-3">Pest Emergency?</h3>
                 <p className="mb-6">We provide 24/7 emergency pest control services throughout Central Maine</p>
-                <a href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`}>
+                <a 
+                  href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`}
+                  onClick={() => trackEvent('click', 'phone', 'emergency_call_now')}
+                >
                   <Button size="lg" className="w-full bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-bold">
                     Call Now
                   </Button>
