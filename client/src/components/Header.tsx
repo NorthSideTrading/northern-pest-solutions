@@ -3,7 +3,6 @@ import { Link, useLocation } from 'wouter';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { COMPANY_INFO, NAVIGATION } from '@/lib/constants';
-import { trackEvent } from '../../lib/analytics';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -188,7 +187,6 @@ export default function Header() {
               <a 
                 href="tel:+12072150860"
                 className="bg-[var(--nps-amber)] hover:bg-[var(--nps-amber)]/90 text-[var(--nps-forest)] font-medium px-5 py-2 rounded transition-colors duration-200 inline-flex items-center"
-                onClick={() => trackEvent('click', 'phone', 'header_cta_phone')}
               >
                 (207) 215-0860
               </a>

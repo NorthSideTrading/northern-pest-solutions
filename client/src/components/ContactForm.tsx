@@ -6,7 +6,6 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { SERVICES } from '@/lib/constants';
 import { useToast } from '@/hooks/use-toast';
-import { trackEvent } from '../../lib/analytics';
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -31,9 +30,6 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Track contact form submission
-    trackEvent('form_submit', 'contact', 'contact_form');
     
     // Simulate form submission
     setTimeout(() => {
