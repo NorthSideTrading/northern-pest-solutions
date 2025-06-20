@@ -15,6 +15,8 @@ export const initGA = () => {
     return;
   }
 
+  console.log('Initializing Google Analytics with ID:', measurementId);
+
   // Add Google Analytics script to the head
   const script1 = document.createElement('script');
   script1.async = true;
@@ -28,6 +30,7 @@ export const initGA = () => {
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', '${measurementId}');
+    console.log('Google Analytics configured for:', '${measurementId}');
   `;
   document.head.appendChild(script2);
 };
