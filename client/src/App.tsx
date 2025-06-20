@@ -4,7 +4,9 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "@/components/Layout";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { initGA } from "../lib/analytics";
+import { useAnalytics } from "../hooks/use-analytics";
 
 // Lazy load all pages for optimal code splitting
 const Home = lazy(() => import("@/pages/Home"));
@@ -61,6 +63,9 @@ const LoadingSpinner = () => (
 );
 
 function Router() {
+  // Track page views when routes change
+  useAnalytics();
+  
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <Switch>
